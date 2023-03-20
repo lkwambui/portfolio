@@ -228,7 +228,7 @@
   
   .home {
     display: flex;
-    background: url("https://source.unsplash.com/720x600/?laptop,desktop, office") no-repeat
+    background: url("https://source.unsplash.com/720x600/?laptop,code,computer") no-repeat
       center;
     height: 100vh;
     color: #fff;
@@ -298,7 +298,7 @@
     background: radial-gradient(#e1efff, white);
   }
   .about .title::after {
-    content: "—Who I Am ?—";
+    content: "—Who I Am—";
     text-overflow: ellipsis;
     display: -webkit-inline-box;
     -webkit-line-clamp: 3;
@@ -427,7 +427,7 @@
     background: radial-gradient(#e1efff, white);
   }
   .skills .title::after {
-    content: "—What I Know ?—";
+    content: "—What I Know—";
   }
   
   .skills .skills-content .column {
@@ -506,15 +506,15 @@
     background: #1e3551;
   }
   
-  .skills-content .right .python::before {
+  .skills-content .right .html::before {
     width: 90%;
   }
   
-  .skills-content .right .html::before {
+  .skills-content .right .css::before {
     width: 80%;
   }
   
-  .skills-content .right .css::before {
+  .skills-content .right .Postgres::before {
     width: 60%;
   }
   
@@ -526,7 +526,7 @@
     width: 60%;
   }
   
-  .skills-content .right .django::before {
+  .skills-content .right .react::before {
     width: 70%;
   }
   
@@ -535,7 +535,8 @@
   /* ------------------------------ Projects ------------------------------ */
   
   .projects .title::after {
-    content: "What I did ?";
+    content: "What I have done and What I plan to do";
+    color: #00fbff;
   }
   
   .projects .carousel .card {
