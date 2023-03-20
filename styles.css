@@ -375,7 +375,8 @@
   .services .title::after,
   .projects .title::after {
     background: #111;
-    content: "What I Provide ?";
+    content: "What I Provide";
+    color: #00fbff;
   }
   
   .services .serv-content .card {
