@@ -10,28 +10,28 @@ const projects = [
     title: "Premium Event rentals & Full-Service Event Planning & management.",
     image: image1,
     tags: ["UI/UX Design", "Prototyping", "Wireframe"],
-    link: "https://partylounges.com", // Add the project link here
+    link: "https://partylounges.com",
   },
   {
     id: 2,
     title: "A casual jobs application site",
     image: image2,
     tags: ["UI/UX Design", "Front-End Development", "Web Design"],
-    link: "https://jantanet.com", // Add the project link here
+    link: "https://jantanet.com", 
   },
   {
     id: 3,
     title: "CMS Based Website Design",
     image: image3,
     tags: ["UI/UX Design", "Dashboard", "Wireframe"],
-    link: "https://mygiftharbor.com", // Add the project link here
+    link: "https://mygiftharbor.com", 
   },
   {
     id: 4,
     title: "Poetry Based Website Design",
     image: image4,
     tags: ["UI/UX Design", "Web Design", "Responsive"],
-    link: "https://www.walkingshadowpoetry.com", // Add the project link here
+    link: "https://www.walkingshadowpoetry.com", 
   },
 ];
 
