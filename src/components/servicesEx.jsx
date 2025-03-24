@@ -26,7 +26,7 @@ function ServicesSection() {
                 UI/UX Design
                 </h3>
                 <p className="text-sm text-gray-600 text-center mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...
+                Creating user-friendly and visually appealing digital experiences
                 </p>
                 <div className="text-center mt-4">
                 <a
@@ -50,7 +50,8 @@ function ServicesSection() {
               Application Design
               </h3>
               <p className="text-sm text-gray-600 text-center mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...
+              Defining how users interact with an app, ensuring a seamless, intuitive, 
+              and visually appealing experience
               </p>
               <div className="text-center mt-4">
               <a
@@ -74,7 +75,7 @@ function ServicesSection() {
               Website Design & Development
               </h3>
               <p className="text-sm text-gray-600 text-center mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...
+              Focusing on how a website looks and how users interact with it
               </p>
               <div className="text-center mt-4">
               <a
@@ -98,7 +99,8 @@ function ServicesSection() {
               Front-End Development
               </h3>
               <p className="text-sm text-gray-600 text-center mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...
+              Designing and building the visual and interactive parts of a website or 
+              web application that users see and interact with directly
               </p>
               <div className="text-center mt-4">
               <a
