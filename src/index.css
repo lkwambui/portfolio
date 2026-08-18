@@ -1,7 +1,115 @@
-html {
-    scroll-behavior: smooth;
-  }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background: rgba(245, 166, 35, 0.35);
+    color: #17201f;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0f5550;
+    outline-offset: 2px;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    body {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-6 md:px-10;
+  }
+
+  .eyebrow {
+    @apply text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-primary;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn rounded-full bg-accent text-primary hover:bg-[#d98f13];
+  }
+
+  .btn-dark {
+    @apply btn rounded-full bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-accent {
+    @apply btn rounded-full bg-accent text-primary hover:bg-[#d98f13];
+  }
+
+  .btn-outline {
+    @apply btn rounded-full border border-ink/25 text-ink hover:border-primary hover:text-primary;
+  }
+
+  .btn-ghost {
+    @apply btn rounded-full text-ink hover:text-primary;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink/15 px-3 py-1 text-xs font-medium text-ink/80;
+  }
+
+  .page-fade {
+    animation: page-fade 0.4s ease both;
+  }
+
+  @keyframes page-fade {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .page-fade {
+      animation: none;
+    }
+  }
+
+  .prose-body {
+    @apply text-[0.975rem] leading-[1.85] text-ink/80;
+  }
+}
