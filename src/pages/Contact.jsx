@@ -98,17 +98,15 @@ export default function Contact() {
           </div>
 
           <Reveal delay={80} className="lg:col-span-7">
-            <div className="border border-primary/15 bg-cream p-7 sm:p-10">
-              <h2 className="font-display text-xl font-semibold tracking-tight text-ink">
-                Project inquiry
-              </h2>
-              <p className="mt-1 text-sm text-ink/60">
-                The more context you give, the more useful my reply will be.
-              </p>
-              <div className="mt-8">
+            <h2 className="font-display text-xl font-semibold tracking-tight text-ink">
+              Project inquiry
+            </h2>
+            <p className="mt-1 text-sm text-ink/60">
+              The more context you give, the more useful my reply will be.
+            </p>
+            <div className="mt-8">
                 <ContactForm whatsapp={site.whatsapp} />
               </div>
-            </div>
           </Reveal>
         </div>
       </section>

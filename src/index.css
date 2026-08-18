@@ -112,4 +112,8 @@
   .prose-body {
     @apply text-[0.975rem] leading-[1.85] text-ink/80;
   }
+
+  .section-divider {
+    @apply border-b border-primary/15;
+  }
 }

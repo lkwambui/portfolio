@@ -15,7 +15,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
 
   const text = (
     <>
-      <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+      <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
         {project.title}
       </h3>
       <p className="mt-3 max-w-xl text-[0.95rem] leading-relaxed text-ink/70">
@@ -36,21 +36,21 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
   const image = (
     <Link
       to={`/projects/${project.slug}`}
-      className="group block aspect-[16/10] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
+      className="block aspect-[16/10] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
       aria-label={`${project.title} case study`}
     >
       <img
         src={project.featuredImage.src}
         alt={project.featuredImage.alt}
         loading="lazy"
-        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        className="h-full w-full object-cover"
       />
     </Link>
   );
 
   if (variant === "full") {
     return (
-      <Reveal className="group grid gap-6 lg:grid-cols-12">
+      <Reveal className="grid gap-8 lg:grid-cols-12">
         <div className="lg:col-span-8">
           <Link
             to={`/projects/${project.slug}`}
@@ -61,22 +61,22 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
               src={project.featuredImage.src}
               alt={project.featuredImage.alt}
               loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              className="h-full w-full object-cover"
             />
           </Link>
         </div>
         <div className="flex flex-col justify-center lg:col-span-4">
           {meta}
-          <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink">
+          <h3 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink">
             {project.title}
           </h3>
-          <p className="mt-3 text-[0.95rem] leading-relaxed text-ink/70">
+          <p className="mt-4 text-[0.95rem] leading-relaxed text-ink/70">
             {project.description}
           </p>
-          <TechnologyList items={project.technologies} className="mt-4" />
+          <TechnologyList items={project.technologies} className="mt-5" />
           <Link
             to={`/projects/${project.slug}`}
-            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
+            className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
           >
             View Case Study
             <LuArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -90,7 +90,9 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
     const reverse = variant === "split-reverse";
     return (
       <Reveal className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-        <div className={reverse ? "lg:order-2" : ""}>{image}</div>
+        <div className={reverse ? "lg:order-2" : ""}>
+          {image}
+        </div>
         <div className={reverse ? "lg:order-1" : ""}>
           {meta}
           {text}
@@ -103,14 +105,14 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
     <Reveal className="flex h-full flex-col border border-primary/15 bg-white">
       <Link
         to={`/projects/${project.slug}`}
-        className="group block aspect-[4/3] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
+        className="block aspect-[4/3] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
         aria-label={`${project.title} case study`}
       >
         <img
           src={project.featuredImage.src}
           alt={project.featuredImage.alt}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          className="h-full w-full object-cover"
         />
       </Link>
       <div className="flex flex-1 flex-col p-6">

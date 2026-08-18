@@ -13,9 +13,8 @@ export default function Footer() {
               Lucy Kamau<span className="text-accent">.</span>
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/75">
-              Software Developer &amp; UI/UX Designer based in Kenya. I design and
-              build modern digital products, websites, web applications and user
-              experiences.
+              Software Developer & Product Designer based in Kenya. I design and
+              build digital products that work.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {socials.map((s) => (

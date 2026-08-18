@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { LuMenu, LuX, LuArrowUpRight } from "react-icons/lu";
+import { LuMenu, LuX } from "react-icons/lu";
 import { nav, navSecondary, site } from "../../data/site";
 
 function Brand() {
@@ -105,8 +105,10 @@ function MobileMenu({ open, onClose }) {
                   }`
                 }
               >
-                {item.label}
-                <LuArrowUpRight className="h-5 w-5 opacity-40" />
+                <span>{item.label}</span>
+                <span aria-hidden="true" className="text-white/30">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
               </NavLink>
             </li>
           ))}
@@ -155,10 +157,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`no-print sticky top-0 z-40 transition-shadow ${
-        scrolled
-          ? "bg-white/95 shadow-[0_1px_0_rgba(0,0,0,0.08)] backdrop-blur"
-          : "bg-white"
+      className={`no-print sticky top-0 z-40 bg-white ${
+        scrolled ? "shadow-[0_1px_0_rgba(0,0,0,0.08)]" : ""
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between gap-8">

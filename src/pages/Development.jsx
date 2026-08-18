@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LuArrowUpRight } from "react-icons/lu";
+import { LuArrowRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
 import SectionHeading from "../components/ui/SectionHeading";
 import Reveal from "../components/ui/Reveal";
@@ -65,7 +65,7 @@ const tools = [
 function DevelopmentArea({ area, index }) {
   const featured = area.projects.map(getProject).filter(Boolean);
   return (
-    <Reveal delay={index * 40} className="grid gap-8 border-t border-primary/15 py-12 last:border-b lg:grid-cols-12">
+    <div className="grid gap-8 border-t border-primary/15 py-10 last:border-b lg:grid-cols-12">
       <div className="lg:col-span-4">
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary">
           {String(index + 1).padStart(2, "0")}
@@ -82,29 +82,28 @@ function DevelopmentArea({ area, index }) {
           <Link
             key={project.slug}
             to={`/projects/${project.slug}`}
-            className="group flex flex-col border border-primary/15 transition-colors hover:border-primary/50"
+            className="flex flex-col border border-primary/15"
           >
             <div className="aspect-[16/10] overflow-hidden bg-[#f0f0f0]">
               <img
                 src={project.featuredImage.src}
                 alt={project.featuredImage.alt}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="flex flex-1 flex-col p-5">
               <div className="flex items-center justify-between">
-                <h3 className="font-display text-lg font-semibold tracking-tight text-ink group-hover:text-primary">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
                   {project.title}
                 </h3>
-                <LuArrowUpRight className="h-4 w-4 shrink-0 text-ink/40 transition-colors group-hover:text-primary" />
               </div>
               <TechnologyList items={project.technologies} className="mt-3" />
             </div>
           </Link>
         ))}
       </div>
-    </Reveal>
+    </div>
   );
 }
 
@@ -126,27 +125,24 @@ export default function Development() {
             description="Frontend applications, backend services, authentication, payments, databases and business systems - development work that ships real products."
             as="h1"
           />
-          <div className="mt-16">
+          <div className="mt-14">
             {developmentAreas.map((area, index) => (
               <DevelopmentArea key={area.title} area={area} index={index} />
             ))}
           </div>
 
-          <Reveal className="mt-14 border border-primary/15 bg-white p-8">
+          <div className="mt-14 border border-primary/15 bg-white p-8">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary">
               Tools I work with
             </p>
-            <ul className="mt-4 flex flex-wrap gap-2">
+            <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
               {tools.map((tool) => (
-                <li
-                  key={tool}
-                  className="rounded-full border border-primary/15 bg-cream px-3 py-1 text-xs font-medium text-ink/80"
-                >
+                <li key={tool} className="text-sm text-ink/80">
                   {tool}
                 </li>
               ))}
             </ul>
-          </Reveal>
+          </div>
         </div>
       </section>
 

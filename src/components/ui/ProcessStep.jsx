@@ -4,10 +4,10 @@ export default function ProcessStep({ step, index }) {
   return (
     <Reveal
       delay={index * 60}
-      className="group border-t border-primary/15 pt-8"
+      className="border-t border-primary/15 pt-8"
     >
       <div className="flex items-baseline justify-between">
-        <span className="font-display text-4xl font-semibold text-ink/20 transition-colors group-hover:text-primary sm:text-5xl">
+        <span className="font-display text-4xl font-semibold text-primary/20 sm:text-5xl">
           {step.step}
         </span>
         <span className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink/40">

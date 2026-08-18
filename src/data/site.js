@@ -1,12 +1,12 @@
 export const site = {
   name: "Lucy Kamau",
-  role: "Product Designer & Full-Stack Developer",
+  role: "Software Developer & Product Designer",
   location: "Wote, Makueni, Kenya",
   email: "lucykamau949@gmail.com",
   phone: "+254799656267",
   phoneDisplay: "+254 799 656 267",
   whatsapp: "https://wa.me/254799656264",
-  domain: "https://lucykamau.netlify.app",
+  domain: "https://lucykamau.logicorex.co.ke",
   cv: "/Lucy_Kamau_CV.pdf",
 };
 

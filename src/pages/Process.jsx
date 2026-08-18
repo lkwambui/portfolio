@@ -148,12 +148,12 @@ export default function Process() {
               <Link
                 key={item}
                 to="/projects"
-                className="group flex items-center justify-between border border-primary/15 p-5 transition-colors hover:border-primary/50"
+                className="group flex items-center justify-between border border-primary/15 p-5"
               >
-                <span className="font-display text-lg font-semibold tracking-tight text-ink group-hover:text-primary">
+                <span className="font-display text-lg font-semibold tracking-tight text-ink">
                   {item}
                 </span>
-                <LuArrowRight className="h-5 w-5 text-ink/40 transition-transform group-hover:translate-x-1" />
+                <LuArrowRight className="h-5 w-5 text-ink/40" aria-hidden="true" />
               </Link>
             ))}
           </div>
