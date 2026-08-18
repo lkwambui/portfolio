@@ -37,7 +37,7 @@ export default function Services() {
         <SectionHeading
           eyebrow="Services"
           title="Design and development services for real products."
-          description="From a single website to a complete business system — each engagement is structured, transparent and built to solve a real problem."
+          description="From a single website to a complete business system - each engagement is structured, transparent and built to solve a real problem."
           as="h1"
         />
 
@@ -100,7 +100,7 @@ export default function Services() {
           </Reveal>
           <Reveal delay={80} className="flex flex-col items-start justify-center">
             <p className="prose-body max-w-md">
-              Every project follows the same six phases — from discovery and
+              Every project follows the same six phases - from discovery and
               definition to design, build, test and launch.
             </p>
             <Link

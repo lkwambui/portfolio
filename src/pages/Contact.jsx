@@ -30,7 +30,7 @@ export default function Contact() {
   usePageMeta({
     title: "Contact",
     description:
-      "Start a project with Lucy Kamau — tell me about the website, product or business system you want designed and built.",
+      "Start a project with Lucy Kamau - tell me about the website, product or business system you want designed and built.",
     path: "/contact",
   });
 

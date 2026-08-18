@@ -11,7 +11,7 @@ export default function Work() {
   usePageMeta({
     title: "Projects",
     description:
-      "Selected projects and case studies by Lucy Kamau — e-commerce platforms, business systems, websites and product design.",
+      "Selected projects and case studies by Lucy Kamau - e-commerce platforms, business systems, websites and product design.",
     path: "/projects",
   });
 
@@ -29,7 +29,7 @@ export default function Work() {
           <SectionHeading
             eyebrow="Projects"
             title="A complete archive of products I've designed and built."
-            description="Every project below is a real product — designed and developed with the problems and people in mind. Use the filters to explore by type."
+            description="Every project below is a real product - designed and developed with the problems and people in mind. Use the filters to explore by type."
             as="h1"
           />
         </div>

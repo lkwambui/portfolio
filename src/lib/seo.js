@@ -21,7 +21,7 @@ function setMeta(attr, key, content) {
  */
 export function usePageMeta({ title, description, path = "/", image, jsonLd }) {
   useEffect(() => {
-    const fullTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.role}`;
+    const fullTitle = title ? `${title} - ${site.name}` : `${site.name} - ${site.role}`;
     const url = `${site.domain}${path}`;
 
     document.title = fullTitle;

@@ -62,7 +62,7 @@ export default function Process() {
   usePageMeta({
     title: "Process",
     description:
-      "How Lucy Kamau takes a digital product from idea to launch — discovery, definition, design, build, test and launch.",
+      "How Lucy Kamau takes a digital product from idea to launch - discovery, definition, design, build, test and launch.",
     path: "/process",
   });
 
@@ -72,7 +72,7 @@ export default function Process() {
         <SectionHeading
           eyebrow="Process"
           title="From idea to launch, in six clear phases."
-          description="A working process that keeps projects moving, decisions documented and everyone aligned — without unnecessary ceremony."
+          description="A working process that keeps projects moving, decisions documented and everyone aligned - without unnecessary ceremony."
           as="h1"
         />
 
@@ -141,9 +141,9 @@ export default function Process() {
           </div>
           <div className="flex flex-col gap-4 lg:col-span-7">
             {[
-              "Shopey — e-commerce with M-Pesa and Stripe",
-              "LogicoreX — business systems for SACCOs, retailers and farmers",
-              "Airtime Scratch System — a fintech checkout built from scratch",
+              "Shopey - e-commerce with M-Pesa and Stripe",
+              "LogicoreX - business systems for SACCOs, retailers and farmers",
+              "Airtime Scratch System - a fintech checkout built from scratch",
             ].map((item) => (
               <Link
                 key={item}

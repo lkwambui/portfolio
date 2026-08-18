@@ -38,21 +38,21 @@ const whatIDo = [
     icon: LuGlobe,
     title: "Web Development",
     description:
-      "Responsive websites and modern web experiences — designed to feel premium and built to perform.",
+      "Responsive websites and modern web experiences - designed to feel premium and built to perform.",
     tech: ["React", "Next.js", "Tailwind CSS"],
   },
   {
     icon: LuLayers,
     title: "Full-Stack Development",
     description:
-      "Frontend applications, backend APIs, databases, authentication and business logic — built as one product.",
+      "Frontend applications, backend APIs, databases, authentication and business logic - built as one product.",
     tech: ["Node.js", "Express", "PostgreSQL"],
   },
   {
     icon: LuBoxes,
     title: "Digital Product Development",
     description:
-      "Taking products from concept to implementation — e-commerce, dashboards, business systems and integrations.",
+      "Taking products from concept to implementation - e-commerce, dashboards, business systems and integrations.",
     tech: ["M-Pesa Daraja", "Stripe", "REST APIs"],
   },
 ];
@@ -75,7 +75,7 @@ const processSteps = [
     step: "02",
     title: "Design",
     description:
-      "Structure the product and design the experience — flows, wireframes, UI and prototypes.",
+      "Structure the product and design the experience - flows, wireframes, UI and prototypes.",
   },
   {
     step: "03",
@@ -87,7 +87,7 @@ const processSteps = [
     step: "04",
     title: "Deliver",
     description:
-      "Test, deploy and hand over a product that works — then iterate based on real usage.",
+      "Test, deploy and hand over a product that works - then iterate based on real usage.",
   },
 ];
 
@@ -104,7 +104,7 @@ function Hero() {
       <div className="container-page grid items-center gap-14 pb-24 pt-16 md:pb-28 md:pt-24 lg:grid-cols-12 lg:gap-12">
         <Reveal className="lg:col-span-7">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent">
-            Lucy Kamau — Software Developer &amp; UI/UX Designer
+            Lucy Kamau - Software Developer &amp; UI/UX Designer
           </p>
           <h1 className="mt-6 font-display text-[2.6rem] font-semibold leading-[1.06] tracking-tight sm:text-6xl md:text-[4rem]">
             Designing thoughtful interfaces.
@@ -114,7 +114,7 @@ function Hero() {
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/70">
             I design and build modern digital products, websites, web
-            applications and user experiences — from the first sketch to a
+            applications and user experiences - from the first sketch to a
             deployed system. I don&apos;t just design interfaces. I understand how
             to build them.
           </p>
@@ -228,7 +228,7 @@ function WhatIDo() {
         <SectionHeading
           eyebrow="What I do"
           title="Design, build and ship complete digital products."
-          description="Four disciplines, one continuous product flow — from interface to infrastructure."
+          description="Four disciplines, one continuous product flow - from interface to infrastructure."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {whatIDo.map((item, index) => {
@@ -303,7 +303,7 @@ function DevelopmentStack() {
                     key={tech}
                     className="flex items-center gap-2 text-sm text-ink/80"
                   >
-                    <span className="text-accent">—</span>
+                    <span className="text-accent">-</span>
                     {tech}
                   </li>
                 ))}

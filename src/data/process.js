@@ -21,7 +21,7 @@ export const processSteps = [
     step: "04",
     title: "Build",
     description:
-      "Frontend, backend, APIs and integrations — turning the design into a working product.",
+      "Frontend, backend, APIs and integrations - turning the design into a working product.",
   },
   {
     step: "05",

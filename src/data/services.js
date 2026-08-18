@@ -3,7 +3,7 @@ export const services = [
     slug: "web-design-development",
     title: "Web Design & Development",
     summary:
-      "Responsive websites and modern web experiences — designed to feel premium and built to perform.",
+      "Responsive websites and modern web experiences - designed to feel premium and built to perform.",
     includes: [
       "Discovery and content structure",
       "Custom visual design",
@@ -33,7 +33,7 @@ export const services = [
     slug: "fullstack-development",
     title: "Full-Stack Development",
     summary:
-      "Frontend, backend, APIs, authentication and databases — built as one coherent product.",
+      "Frontend, backend, APIs, authentication and databases - built as one coherent product.",
     includes: [
       "Frontend applications (React / Next.js)",
       "Backend services (Node.js / Express)",

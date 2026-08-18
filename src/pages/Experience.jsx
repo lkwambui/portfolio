@@ -8,11 +8,11 @@ import { experience } from "../data/experience";
 
 const milestones = [
   {
-    period: "2018 — 2022",
+    period: "2018 - 2022",
     title: "Diploma in Information Communication Technology",
     place: "Rift Valley Institute of Science and Technology",
     detail:
-      "The foundation for everything here — the start of a design and development journey.",
+      "The foundation for everything here - the start of a design and development journey.",
   },
   ...experience.map((job) => ({
     period: job.period,
@@ -30,7 +30,7 @@ export default function Experience() {
   usePageMeta({
     title: "Experience",
     description:
-      "Lucy Kamau's professional experience and education — UI/UX design, web development and full-stack work across Kenyan businesses.",
+      "Lucy Kamau's professional experience and education - UI/UX design, web development and full-stack work across Kenyan businesses.",
     path: "/experience",
   });
 
@@ -73,11 +73,11 @@ export default function Experience() {
           <Reveal className="mt-14 flex flex-col items-start justify-between gap-6 border border-primary/15 bg-cream p-8 md:flex-row md:items-center">
             <div>
               <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
-                Today — LogicoreX &amp; client projects
+                Today - LogicoreX &amp; client projects
               </h2>
               <p className="mt-2 max-w-xl text-sm text-ink/65">
                 Beyond my UI/UX design role, I work with LogicoreX building
-                business systems for SACCOs, SMEs, retailers and farmers — from
+                business systems for SACCOs, SMEs, retailers and farmers - from
                 POS terminals integrated with eTIMS to marketplaces and CRM
                 tools.
               </p>

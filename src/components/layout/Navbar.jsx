@@ -8,7 +8,7 @@ function Brand() {
     <Link
       to="/"
       className="flex shrink-0 items-baseline gap-1.5"
-      aria-label="Lucy Kamau — home"
+      aria-label="Lucy Kamau - home"
     >
       <span className="font-display text-[1.35rem] font-semibold leading-none tracking-tight text-ink">
         Lucy Kamau
@@ -76,7 +76,7 @@ function MobileMenu({ open, onClose }) {
       aria-hidden={!open}
     >
       <div className="container-page flex items-center justify-between py-5">
-        <Link to="/" onClick={onClose} className="flex items-baseline gap-1.5" aria-label="Lucy Kamau — home">
+        <Link to="/" onClick={onClose} className="flex items-baseline gap-1.5" aria-label="Lucy Kamau - home">
           <span className="font-display text-[1.35rem] font-semibold leading-none tracking-tight text-white">
             Lucy Kamau
           </span>

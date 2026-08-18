@@ -73,7 +73,7 @@ export const projects = [
         "The platform was designed and developed as a complete product: information architecture, user flows, interface design and the underlying application that powers it.",
       ],
       problem: [
-        "Online sellers need a storefront that feels trustworthy and easy to use, but local payment preferences make a big difference — shoppers expect a smooth, familiar checkout experience rather than being pushed towards payment methods they do not use.",
+        "Online sellers need a storefront that feels trustworthy and easy to use, but local payment preferences make a big difference - shoppers expect a smooth, familiar checkout experience rather than being pushed towards payment methods they do not use.",
       ],
       designProcess: [
         "Product structure and information architecture",
@@ -126,7 +126,7 @@ export const projects = [
       {
         src: logicorexPlatform,
         alt: "LogicoreX platform modules overview",
-        caption: "Platform modules — SACCO management, agriculture marketplace, WhatsApp CRM",
+        caption: "Platform modules - SACCO management, agriculture marketplace, WhatsApp CRM",
         span: "full",
         type: "desktop",
       },
@@ -154,7 +154,7 @@ export const projects = [
     ],
     caseStudy: {
       overview: [
-        "LogicoreX is a technology agency, and this work covers both its own digital brand and the business systems it builds for clients — including a SACCO management system, an agriculture produce marketplace, a WhatsApp CRM for SMEs and a POS terminal integrated with eTIMS.",
+        "LogicoreX is a technology agency, and this work covers both its own digital brand and the business systems it builds for clients - including a SACCO management system, an agriculture produce marketplace, a WhatsApp CRM for SMEs and a POS terminal integrated with eTIMS.",
         "The emphasis is on systems that small and medium businesses can actually run day-to-day: finance, savings, loan management, sales and customer communication.",
       ],
       problem: [
@@ -213,7 +213,7 @@ export const projects = [
       {
         src: kredoChapchap,
         alt: "Airtime purchase checkout with M-Pesa",
-        caption: "Airtime checkout — transparent totals before payment",
+        caption: "Airtime checkout - transparent totals before payment",
         span: "full",
         type: "desktop",
       },
@@ -226,7 +226,7 @@ export const projects = [
         "Scratch cards are slow and wasteful, while many airtime channels have poor feedback on whether a purchase actually went through. The system needed to be fast, secure and trustworthy.",
       ],
       designProcess: [
-        "Purchase flow design — number, amount, transparent total, payment confirmation",
+        "Purchase flow design - number, amount, transparent total, payment confirmation",
         "Clear status feedback at every step",
       ],
       development: [
@@ -271,7 +271,7 @@ export const projects = [
       {
         src: partylounges,
         alt: "Party Lounges homepage",
-        caption: "Homepage — where creativity meets purpose",
+        caption: "Homepage - where creativity meets purpose",
         span: "wide",
         type: "desktop",
       },
@@ -295,7 +295,7 @@ export const projects = [
         "A website for a premium event rentals and full-service event planning company. It presents their services and catalogue, showcases the work through a gallery, and turns enquiries into a structured quote request flow.",
       ],
       problem: [
-        "Event planners need to build trust quickly — clients want to see the quality of the work before reaching out. The site needed to look premium and make the path from browsing to getting a quote effortless.",
+        "Event planners need to build trust quickly - clients want to see the quality of the work before reaching out. The site needed to look premium and make the path from browsing to getting a quote effortless.",
       ],
       designProcess: [
         "Service and catalogue structure",
@@ -342,14 +342,14 @@ export const projects = [
       {
         src: farmShop,
         alt: "Farm Shop homepage with produce catalogue",
-        caption: "Fresh produce catalogue — harvested to order",
+        caption: "Fresh produce catalogue - harvested to order",
         span: "full",
         type: "desktop",
       },
     ],
     caseStudy: {
       overview: [
-        "An e-commerce store for a farm in Nakuru selling fresh produce — maize, beans, peas and potatoes — harvested to order and delivered across Kenya.",
+        "An e-commerce store for a farm in Nakuru selling fresh produce - maize, beans, peas and potatoes - harvested to order and delivered across Kenya.",
       ],
       problem: [
         "Farmers sell produce directly to local buyers but had no way to reach customers beyond their region. The store needed to feel fresh and trustworthy while keeping ordering simple for customers who may not be comfortable with complex checkout flows.",
@@ -399,14 +399,14 @@ export const projects = [
       {
         src: mygiftharbor,
         alt: "MyGiftHarbor homepage with gift hampers",
-        caption: "Homepage — gift hampers and custom apparel",
+        caption: "Homepage - gift hampers and custom apparel",
         span: "wide",
         type: "desktop",
       },
       {
         src: mygiftharbor2,
         alt: "MyGiftHarbor product sections",
-        caption: "Product sections — hampers, apparel and digital services",
+        caption: "Product sections - hampers, apparel and digital services",
         span: "standard",
         type: "desktop",
       },
@@ -434,7 +434,7 @@ export const projects = [
         },
       ],
       challenges: [
-        "Organising many product types — hampers, apparel, digital services — into one clean storefront.",
+        "Organising many product types - hampers, apparel, digital services - into one clean storefront.",
       ],
       solutions: [
         "Clear product sections with featured and on-sale areas that are easy to manage from the CMS.",
@@ -462,7 +462,7 @@ export const projects = [
       {
         src: hoppieStore,
         alt: "Hoppie product catalogue",
-        caption: "Product catalogue — fashion, watches and electronics",
+        caption: "Product catalogue - fashion, watches and electronics",
         span: "full",
         type: "desktop",
       },
@@ -562,7 +562,7 @@ export const projects = [
       {
         src: techverse,
         alt: "TechVerse homepage with trending tech products",
-        caption: "Homepage — latest tech and trending products",
+        caption: "Homepage - latest tech and trending products",
         span: "full",
         type: "desktop",
       },
@@ -611,7 +611,7 @@ export const projects = [
       {
         src: logisco,
         alt: "Logisco Cargo homepage",
-        caption: "Homepage — cargo and transport services",
+        caption: "Homepage - cargo and transport services",
         span: "full",
         type: "desktop",
       },
@@ -675,7 +675,7 @@ export const projects = [
         "A website for a bakery built around a fresh, appetite-driven visual identity that puts the product first.",
       ],
       problem: [
-        "A bakery needed a site that made people want to buy — the food had to be the hero.",
+        "A bakery needed a site that made people want to buy - the food had to be the hero.",
       ],
       designProcess: [
         "Visual identity and photography-led layout",
@@ -723,10 +723,10 @@ export const projects = [
         "A web application for casual jobs where users create accounts, sign in and access work opportunities.",
       ],
       problem: [
-        "Casual-job platforms live or die on a frictionless start — the account creation and sign-in experience had to be quick and reassuring.",
+        "Casual-job platforms live or die on a frictionless start - the account creation and sign-in experience had to be quick and reassuring.",
       ],
       designProcess: [
-        "Auth flow design — sign up, sign in, social sign-in",
+        "Auth flow design - sign up, sign in, social sign-in",
         "Clear form structure and validation cues",
       ],
       development: [
@@ -761,7 +761,7 @@ export const projects = [
       {
         src: walkingshadowpoetry,
         alt: "Walking Shadow Poetry homepage",
-        caption: "Homepage — poetry, performances and shop",
+        caption: "Homepage - poetry, performances and shop",
         span: "full",
         type: "desktop",
       },
@@ -774,7 +774,7 @@ export const projects = [
         "A creative artist needed a home for their work that respects the emotional tone of poetry while still handling practical things like episodes, events and sales.",
       ],
       designProcess: [
-        "Content structure — episodes, performances, gallery, shop",
+        "Content structure - episodes, performances, gallery, shop",
         "Visual tone aligned with the poetry",
       ],
       development: [
@@ -866,7 +866,7 @@ gallery: [
         "A website for a technology company covering the services it offers and the projects it builds for companies across Africa.",
       ],
       problem: [
-        "A tech company needed a credible site that showcases both services and work — including a practical way to list projects available for sale.",
+        "A tech company needed a credible site that showcases both services and work - including a practical way to list projects available for sale.",
       ],
       designProcess: [
         "Service and project structure",
@@ -900,7 +900,7 @@ export const upcomingProjects = [
     title: "CreateHub Kenya",
     category: "Product Design",
     description:
-      "Creator economy platform — product design, marketplace architecture and web technologies.",
+      "Creator economy platform - product design, marketplace architecture and web technologies.",
     technologies: ["Product design", "Marketplace architecture", "Web technologies"],
     note: "Screenshots to be added.",
   },

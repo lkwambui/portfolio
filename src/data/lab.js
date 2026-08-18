@@ -1,5 +1,5 @@
 // Lab / playground experiments.
-// These are clearly experiments and concepts — not client work.
+// These are clearly experiments and concepts - not client work.
 // Add a new entry here when a new experiment is ready.
 export const labExperiments = [
   {

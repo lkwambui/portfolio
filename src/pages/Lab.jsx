@@ -67,7 +67,7 @@ function TypeSpecimen() {
       <div className="mt-5 flex flex-1 flex-col justify-center gap-4">
         <div>
           <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink/40">
-            Display — Fraunces
+            Display - Fraunces
           </p>
           <p
             className="font-display font-semibold leading-none tracking-tight text-ink"
@@ -78,10 +78,10 @@ function TypeSpecimen() {
         </div>
         <div>
           <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink/40">
-            Body — Inter
+            Body - Inter
           </p>
           <p className="mt-2 text-ink/75" style={{ fontSize: `${0.95 * scale}rem` }}>
-            Two families carry the whole system — a considered display serif for
+            Two families carry the whole system - a considered display serif for
             hierarchy and a neutral sans for reading.
           </p>
         </div>
@@ -138,14 +138,14 @@ function DashboardConcept() {
           <p className="text-[0.65rem] font-medium uppercase tracking-[0.16em] text-ink/45">
             Metric
           </p>
-          <p className="mt-3 font-display text-3xl font-semibold text-ink">—</p>
+          <p className="mt-3 font-display text-3xl font-semibold text-ink">-</p>
           <div className="mt-3 h-1.5 w-full bg-ink/10" />
         </div>
         <div className="border border-primary/15 p-4">
           <p className="text-[0.65rem] font-medium uppercase tracking-[0.16em] text-ink/45">
             Metric
           </p>
-          <p className="mt-3 font-display text-3xl font-semibold text-ink">—</p>
+          <p className="mt-3 font-display text-3xl font-semibold text-ink">-</p>
           <div className="mt-3 h-1.5 w-full bg-primary/20" />
         </div>
         <div className="col-span-2 border border-primary/15 p-4">
@@ -206,7 +206,7 @@ export default function Lab() {
   usePageMeta({
     title: "Lab",
     description:
-      "Lucy Kamau's lab — design experiments, interface explorations and development studies. Clearly labelled concepts, not client work.",
+      "Lucy Kamau's lab - design experiments, interface explorations and development studies. Clearly labelled concepts, not client work.",
     path: "/lab",
   });
 
@@ -216,7 +216,7 @@ export default function Lab() {
         <SectionHeading
           eyebrow="Lab"
           title="Experiments, studies and the occasional rabbit hole."
-          description="A playground for interface explorations, typography studies and development experiments. Everything here is clearly a concept — not client work."
+          description="A playground for interface explorations, typography studies and development experiments. Everything here is clearly a concept - not client work."
           as="h1"
         />
 
@@ -257,7 +257,7 @@ export default function Lab() {
           </p>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">
             This page exists so explorations and half-built ideas have an honest
-            home. It is intentionally separate from the Work archive — nothing
+            home. It is intentionally separate from the Work archive - nothing
             here is presented as client work. Experiments are moved into the
             portfolio only once they become real products.
           </p>
@@ -266,7 +266,7 @@ export default function Lab() {
 
       <CtaSection
         title="Have something to build?"
-        description="Real products start with a conversation — the Lab is where ideas get explored."
+        description="Real products start with a conversation - the Lab is where ideas get explored."
       />
     </>
   );

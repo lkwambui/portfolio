@@ -12,8 +12,8 @@ const projectTypes = [
 
 const budgetRanges = [
   "Under KSh 50,000",
-  "KSh 50,000 — 150,000",
-  "KSh 150,000 — 400,000",
+  "KSh 50,000 - 150,000",
+  "KSh 150,000 - 400,000",
   "KSh 400,000+",
   "Not sure yet",
 ];
@@ -89,7 +89,7 @@ export default function ContactForm({ whatsapp }) {
     <form onSubmit={handleSubmit} noValidate className="space-y-6">
       {submitted && (
         <div className="border border-primary/30 bg-primary/5 p-4 text-sm text-ink/80" role="status">
-          Your message has been prepared — it should have opened in WhatsApp. If
+          Your message has been prepared - it should have opened in WhatsApp. If
           not, check your browser&apos;s pop-up settings.
         </div>
       )}
@@ -188,7 +188,7 @@ export default function ContactForm({ whatsapp }) {
         </button>
         <p className="text-xs text-ink/55">
           This opens WhatsApp with your message ready to send. You can also email
-          me directly — see the contact details beside this form.
+          me directly - see the contact details beside this form.
         </p>
       </div>
     </form>

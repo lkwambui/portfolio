@@ -50,7 +50,7 @@ export default function About() {
               I design products, then I build the technology behind them.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70">
-              I&apos;m Lucy Kamau — a UI/UX designer, web designer and full-stack
+              I&apos;m Lucy Kamau - a UI/UX designer, web designer and full-stack
               developer based in {site.location}. For most of my career I&apos;ve
               designed interfaces. What I enjoy most is going one step further and
               building the product myself.
@@ -71,7 +71,7 @@ export default function About() {
             <div className="prose-body space-y-5 lg:col-span-7">
               <p>
                 I started in design and fell into development the way many people
-                do — I wanted to see the interfaces I designed actually work. That
+                do - I wanted to see the interfaces I designed actually work. That
                 curiosity turned into a career where I move between Figma and code
                 in the same afternoon.
               </p>
@@ -100,7 +100,7 @@ export default function About() {
           </div>
           <div className="prose-body space-y-5 lg:col-span-7">
             <p>
-              The biggest failures in digital products usually aren&apos;t visual —
+              The biggest failures in digital products usually aren&apos;t visual -
               they&apos;re gaps between what was designed, what was built and what
               the business actually needed. Because I design and develop, I can
               close those gaps.
@@ -157,7 +157,7 @@ export default function About() {
                 Rift Valley Institute of Science and Technology
               </h3>
               <p className="mt-2 text-sm text-ink/70">
-                Diploma in Information Communication Technology, 2018 — 2022
+                Diploma in Information Communication Technology, 2018 - 2022
               </p>
             </Reveal>
             <Reveal delay={80}>
@@ -201,12 +201,12 @@ export default function About() {
                   LogicoreX
                 </p>
                 <h2 className="mt-4 font-display text-3xl font-semibold leading-[1.12] tracking-tight sm:text-4xl">
-                  Work with LogicoreX — an agency building systems for Kenyan
+                  Work with LogicoreX - an agency building systems for Kenyan
                   businesses.
                 </h2>
                 <p className="mt-5 max-w-xl text-[0.975rem] leading-relaxed text-white/70">
                   Through LogicoreX I&apos;ve helped build business systems for
-                  SACCOs, SMEs, retailers and farmers — from POS terminals
+                  SACCOs, SMEs, retailers and farmers - from POS terminals
                   integrated with eTIMS to marketplaces and CRM tools. It&apos;s
                   where my design background and development skills meet real
                   business operations.
@@ -231,7 +231,7 @@ export default function About() {
                 <p className="mt-5 max-w-xl text-[0.975rem] leading-relaxed text-white/70">
                   I&apos;ve trained staff on systems, helped teams understand the
                   software they use, and I&apos;m interested in mentoring designers
-                  and developers who are starting out — especially making the jump
+                  and developers who are starting out - especially making the jump
                   from design to development.
                 </p>
               </Reveal>

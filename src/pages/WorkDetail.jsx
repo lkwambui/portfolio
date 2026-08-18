@@ -40,7 +40,7 @@ export default function WorkDetail() {
   const project = getProject(slug);
 
   usePageMeta({
-    title: project ? `${project.title} — Case Study` : "Project",
+    title: project ? `${project.title} - Case Study` : "Project",
     description: project?.description,
     path: `/projects/${slug}`,
     jsonLd: project

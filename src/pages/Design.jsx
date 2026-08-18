@@ -14,7 +14,7 @@ function DesignCard({ item }) {
       <Link
         to={item.href}
         className="relative block aspect-[4/3] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
-        aria-label={item.exploration ? `${item.title} — design exploration` : `${item.title} — view project`}
+        aria-label={item.exploration ? `${item.title} - design exploration` : `${item.title} - view project`}
       >
         <img
           src={item.image.src}
@@ -50,7 +50,7 @@ export default function Design() {
   usePageMeta({
     title: "UI/UX Design",
     description:
-      "Lucy Kamau's UI/UX design portfolio — landing pages, dashboards, mobile interfaces, e-commerce designs and design systems.",
+      "Lucy Kamau's UI/UX design portfolio - landing pages, dashboards, mobile interfaces, e-commerce designs and design systems.",
     path: "/ui-ux",
   });
 
@@ -68,7 +68,7 @@ export default function Design() {
           <SectionHeading
             eyebrow="UI/UX Design"
             title="Interfaces designed to be used, not just looked at."
-            description="Landing pages, dashboards, mobile interfaces, e-commerce designs and design systems — with structure, flows and the user in mind."
+            description="Landing pages, dashboards, mobile interfaces, e-commerce designs and design systems - with structure, flows and the user in mind."
             as="h1"
           />
         </div>

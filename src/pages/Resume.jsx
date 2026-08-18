@@ -51,7 +51,7 @@ export default function Resume() {
   usePageMeta({
     title: "Resume",
     description:
-      "Lucy Kamau's resume — UI/UX designer and full-stack developer with experience across digital products, websites, business systems and e-commerce.",
+      "Lucy Kamau's resume - UI/UX designer and full-stack developer with experience across digital products, websites, business systems and e-commerce.",
     path: "/resume",
   });
 
@@ -105,7 +105,7 @@ export default function Resume() {
         <ResumeSection title="Profile">
           <p className="max-w-3xl text-sm leading-relaxed text-ink/80">
             Product designer and full-stack developer based in Kenya. I design
-            user-centred digital products and build the technology behind them —
+            user-centred digital products and build the technology behind them -
             from user research and design systems to frontend applications,
             backend services, databases and payment integrations.
           </p>
@@ -187,7 +187,7 @@ export default function Resume() {
             <h3 className="font-semibold text-ink">
               Rift Valley Institute of Science and Technology
             </h3>
-            <p className="text-xs font-medium text-ink/55">September 2018 — December 2022</p>
+            <p className="text-xs font-medium text-ink/55">September 2018 - December 2022</p>
           </div>
           <p className="mt-1 text-sm text-ink/75">
             Diploma in Information Communication Technology

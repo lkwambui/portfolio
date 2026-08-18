@@ -19,7 +19,7 @@ const designSkills = [
 const developmentSkills = [
   "Component-based frontend (React / Next.js)",
   "Backend services & REST APIs (Node.js / Express)",
-  "Database design — SQL & document models",
+  "Database design - SQL & document models",
   "Authentication & security basics",
   "Payment integration (M-Pesa Daraja, Stripe)",
   "Deployment & maintenance",
@@ -38,7 +38,7 @@ export default function Skills() {
   usePageMeta({
     title: "Skills",
     description:
-      "Lucy Kamau's skills — design, development, tools and professional strengths, with real project context rather than arbitrary ratings.",
+      "Lucy Kamau's skills - design, development, tools and professional strengths, with real project context rather than arbitrary ratings.",
     path: "/skills",
   });
 
@@ -67,7 +67,7 @@ export default function Skills() {
           <SectionHeading
             eyebrow="Skills"
             title="Skills you can verify through the work."
-            description="Rather than arbitrary percentages, these are the skills — each one backed by a project or product on this site."
+            description="Rather than arbitrary percentages, these are the skills - each one backed by a project or product on this site."
             as="h1"
           />
         </div>
@@ -104,7 +104,7 @@ export default function Skills() {
           <SectionHeading
             eyebrow="Tools & technologies"
             title="The stack behind the work."
-            description="Technologies grouped by where they live in the product — used in real projects, not just listed."
+            description="Technologies grouped by where they live in the product - used in real projects, not just listed."
           />
           <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {technologyGroups.map((group, index) => (

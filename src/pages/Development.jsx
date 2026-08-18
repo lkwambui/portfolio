@@ -20,7 +20,7 @@ const developmentAreas = [
   },
   {
     title: "Backend & API Development",
-    body: "Node.js and Express services exposing clean REST APIs — from authentication to business logic.",
+    body: "Node.js and Express services exposing clean REST APIs - from authentication to business logic.",
     projects: ["airtime-scratch-system", "logicorex"],
   },
   {
@@ -30,7 +30,7 @@ const developmentAreas = [
   },
   {
     title: "Database Development",
-    body: "Designing data models and schemas that hold up as products grow — from relational tables to MongoDB documents.",
+    body: "Designing data models and schemas that hold up as products grow - from relational tables to MongoDB documents.",
     projects: ["logicorex", "airtime-scratch-system"],
   },
   {
@@ -40,12 +40,12 @@ const developmentAreas = [
   },
   {
     title: "Business Systems",
-    body: "Systems that businesses run daily — SACCO management, POS with eTIMS, marketplaces, CRM and airtime infrastructure.",
+    body: "Systems that businesses run daily - SACCO management, POS with eTIMS, marketplaces, CRM and airtime infrastructure.",
     projects: ["logicorex", "airtime-scratch-system"],
   },
   {
     title: "Deployment & Maintenance",
-    body: "Taking products live and keeping them running — hosting setup, builds, updates, backups and monitoring.",
+    body: "Taking products live and keeping them running - hosting setup, builds, updates, backups and monitoring.",
     projects: ["shopey", "logicorex"],
   },
 ];
@@ -112,7 +112,7 @@ export default function Development() {
   usePageMeta({
     title: "Development",
     description:
-      "Lucy Kamau's development work — frontend, full-stack, backend APIs, authentication, databases, payments, business systems and deployment.",
+      "Lucy Kamau's development work - frontend, full-stack, backend APIs, authentication, databases, payments, business systems and deployment.",
     path: "/development",
   });
 
@@ -123,7 +123,7 @@ export default function Development() {
           <SectionHeading
             eyebrow="Development"
             title="I build beyond static websites."
-            description="Frontend applications, backend services, authentication, payments, databases and business systems — development work that ships real products."
+            description="Frontend applications, backend services, authentication, payments, databases and business systems - development work that ships real products."
             as="h1"
           />
           <div className="mt-16">

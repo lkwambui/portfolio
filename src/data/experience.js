@@ -2,7 +2,7 @@ export const experience = [
   {
     role: "UI/UX Designer",
     company: "Gemstone Technoglobal Limited",
-    period: "June 2024 — Present",
+    period: "June 2024 - Present",
     location: "Nakuru, Kenya",
     points: [
       "User-centred design strategy, research and usability testing",
@@ -14,7 +14,7 @@ export const experience = [
   {
     role: "Web Designer",
     company: "My Gift Harbour",
-    period: "April 2024 — June 2024",
+    period: "April 2024 - June 2024",
     location: "Nairobi, Kenya",
     points: [
       "Website design and layout for desktop and mobile",
@@ -25,7 +25,7 @@ export const experience = [
   {
     role: "Office Administration & System Support Expert",
     company: "Sumba Group Limited",
-    period: "April 2022 — April 2023",
+    period: "April 2022 - April 2023",
     location: "Nairobi, Kenya",
     points: [
       "System support and helpdesk operations",
@@ -36,7 +36,7 @@ export const experience = [
   {
     role: "IT Intern & Junior Web Developer",
     company: "craterNet",
-    period: "February 2021 — April 2022",
+    period: "February 2021 - April 2022",
     location: "Nakuru, Kenya",
     points: [
       "Contributed to the full SDLC of a SACCO management information system",
@@ -47,7 +47,7 @@ export const experience = [
   {
     role: "Web Administrator",
     company: "Ngera Computer Garage",
-    period: "April 2021 — August 2021",
+    period: "April 2021 - August 2021",
     location: "Kenya",
     points: [
       "Website design, maintenance and security",
