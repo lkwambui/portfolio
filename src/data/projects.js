@@ -21,6 +21,7 @@ import sweetMomentsBanner from "../assets/projects/optimized/sweet-moments-banne
 import jeffersonMbuvi from "../assets/projects/optimized/jefferson-mbuvi.webp";
 import codesolveafrica from "../assets/projects/optimized/codesolveafrica.webp";
 import airpodsProduct from "../assets/projects/optimized/airpods-product.webp";
+import perpetuachomba from "../assets/projects/perpetuachomba.png";
 
 export const workFilters = [
   "All",
@@ -881,6 +882,68 @@ gallery: [
       challenges: ["Presenting services and available work without cluttering the message."],
       solutions: ["A structured layout where each section has one clear purpose."],
       outcome: ["A live website for the technology company."],
+    },
+  },
+  {
+    slug: "perpetuachomba",
+    title: "Perpetua Chomba",
+    category: "Web Development",
+    categories: ["Web Development", "Full-Stack", "UI/UX"],
+    description:
+      "A professional online counselling and relationship coaching website with service areas, session pricing and booking.",
+    role: "Web Design, Frontend Development, Full-Stack Development",
+    roleAreas: ["Web Design", "Frontend Development", "Backend Development"],
+    year: 2026,
+    duration: "Delivered",
+    technologies: ["React", "Tailwind CSS", "Headless WordPress"],
+    featured: false,
+    order: 16,
+    status: "Live",
+    liveUrl: "https://perpetuachomba.com",
+    featuredImage: { src: perpetuachomba, alt: "Perpetua Chomba counselling website" },
+    gallery: [
+      {
+        src: perpetuachomba,
+        alt: "Perpetua Chomba counselling and coaching website",
+        caption: "Online counselling and relationship coaching services",
+        span: "full",
+        type: "desktop",
+      },
+    ],
+    caseStudy: {
+      overview: [
+        "A website for Perpetua Chomba, a counselling psychologist and relationship coach. It presents her services - relationship coaching, trauma and grief counselling, stress and anxiety management, family concerns and life transitions - and makes it easy for clients to understand how sessions work and how to reach out.",
+      ],
+      problem: [
+        "People seeking counselling need to feel safe and confident before they reach out. The site had to communicate trust, professionalism and confidentiality while keeping sensitive service areas welcoming rather than clinical.",
+      ],
+      designProcess: [
+        "Service structure and information architecture",
+        "Calm, humane visual design for sensitive topics",
+        "Booking and contact flows",
+        "Responsive layout for mobile enquiries",
+      ],
+      development: [
+        {
+          heading: "Frontend",
+          body: "Built with React and Tailwind CSS, with a responsive, component-based interface across desktop and mobile.",
+        },
+        {
+          heading: "Backend",
+          body: "Headless WordPress powers the content, letting services, pricing and articles be updated without code.",
+        },
+      ],
+      challenges: [
+        "Making sensitive support areas (trauma, grief, narcissistic abuse awareness) feel inviting rather than clinical.",
+        "Holding a lot of service information while keeping paths from visitor to booking short.",
+      ],
+      solutions: [
+        "A calm, human-centred design tone with clear service categories.",
+        "Clean information architecture with a direct route from interest to contact or booking.",
+      ],
+      outcome: [
+        "A live website for the counselling practice with a clear, professional path from visitor to client.",
+      ],
     },
   },
 ];

@@ -1,0 +1,15 @@
+# Redirect legacy routes before SPA fallback
+RewriteRule ^work/(.+)$ /projects/$1 [R=301,L,NC]
+RewriteRule ^work$ /projects [R=301,L,NC]
+RewriteRule ^design$ /ui-ux [R=301,L,NC]
+
+# SPA fallback - serve index.html for any route that is not a real file/dir
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

@@ -137,7 +137,7 @@ export default function Resume() {
           <p className="mt-4 text-xs text-ink/55">
             Full case studies:{" "}
             <Link to="/projects" className="text-primary underline-offset-2 hover:underline">
-              lucykamau.netlify.app/projects
+              lucykamau.logicorex.co.ke/projects
             </Link>
           </p>
         </ResumeSection>
