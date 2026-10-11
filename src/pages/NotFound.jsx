@@ -7,6 +7,7 @@ export default function NotFound() {
     title: "Page not found",
     description: "That page doesn't exist.",
     path: "/404",
+    robots: "noindex,follow",
   });
 
   return (

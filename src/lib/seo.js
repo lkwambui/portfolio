@@ -19,18 +19,35 @@ function setMeta(attr, key, content) {
  * Sets per-page document title, meta description, Open Graph tags,
  * canonical URL and optional JSON-LD structured data.
  */
-export function usePageMeta({ title, description, path = "/", image, jsonLd }) {
+export function usePageMeta({ title, description, path = "/", image, jsonLd, robots }) {
   useEffect(() => {
-    const fullTitle = title ? `${title} - ${site.name}` : `${site.name} - ${site.role}`;
+    const fullTitle = title
+      ? `${title} - ${site.name}`
+      : `${site.primaryRole || site.role} - ${site.name}`;
     const url = `${site.domain}${path}`;
+    const socialImage = image
+      ? image.startsWith("http")
+        ? image
+        : `${site.domain}${image}`
+      : `${site.domain}/og-image.jpg`;
+    const robotsValue = robots || "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
 
     document.title = fullTitle;
     setMeta("name", "description", description);
+    setMeta("name", "robots", robotsValue);
+    setMeta("name", "author", site.name);
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:site_name", site.name);
+    setMeta("property", "og:locale", "en_KE");
     setMeta("property", "og:title", fullTitle);
     setMeta("property", "og:description", description);
     setMeta("property", "og:url", url);
+    setMeta("property", "og:image", socialImage);
+    setMeta("property", "og:image:alt", fullTitle);
+    setMeta("name", "twitter:card", "summary_large_image");
     setMeta("name", "twitter:title", fullTitle);
     setMeta("name", "twitter:description", description);
+    setMeta("name", "twitter:image", socialImage);
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -49,5 +66,5 @@ export function usePageMeta({ title, description, path = "/", image, jsonLd }) {
       script.textContent = JSON.stringify(jsonLd);
       document.head.appendChild(script);
     }
-  }, [title, description, path, image, jsonLd]);
+  }, [title, description, path, image, jsonLd, robots]);
 }

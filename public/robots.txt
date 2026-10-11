@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /api/
+Host: lucykamau.logicorex.co.ke
 
 Sitemap: https://lucykamau.logicorex.co.ke/sitemap.xml

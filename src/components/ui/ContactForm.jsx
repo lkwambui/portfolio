@@ -42,7 +42,7 @@ function Field({ label, htmlFor, required, error, children }) {
 }
 
 const inputClass =
-  "w-full border border-primary/15 bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-ink/35 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary";
+  "w-full rounded-2xl border border-line bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-ink/35 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20";
 
 export default function ContactForm({ whatsapp }) {
   const [form, setForm] = useState(initialForm);

@@ -5,7 +5,7 @@ import Reveal from "../ui/Reveal";
 
 export default function FeaturedProject({ project, variant = "split", index = 0 }) {
   const meta = (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink/50">
       <span className="text-primary">{String(index + 1).padStart(2, "0")}</span>
       <span className="h-px w-6 bg-ink/20" aria-hidden="true" />
       <span>{project.category}</span>
@@ -36,32 +36,32 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
   const image = (
     <Link
       to={`/projects/${project.slug}`}
-      className="block aspect-[16/10] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
+      className="group block aspect-[16/10] overflow-hidden rounded-[1.6rem] border border-line bg-[#f5f3ef] shadow-[0_18px_35px_rgba(32,32,32,0.05)]"
       aria-label={`${project.title} case study`}
     >
       <img
         src={project.featuredImage.src}
         alt={project.featuredImage.alt}
         loading="lazy"
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
       />
     </Link>
   );
 
   if (variant === "full") {
     return (
-      <Reveal className="grid gap-8 lg:grid-cols-12">
+      <Reveal className="grid gap-8 rounded-[2rem] border border-line bg-white p-4 shadow-[0_18px_45px_rgba(32,32,32,0.05)] lg:grid-cols-12 lg:p-6">
         <div className="lg:col-span-8">
           <Link
             to={`/projects/${project.slug}`}
-            className="block aspect-[16/9] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
+            className="group block aspect-[16/9] overflow-hidden rounded-[1.5rem] border border-line bg-[#f5f3ef]"
             aria-label={`${project.title} case study`}
           >
             <img
               src={project.featuredImage.src}
               alt={project.featuredImage.alt}
               loading="lazy"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </Link>
         </div>
@@ -89,7 +89,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
   if (variant === "split" || variant === "split-reverse") {
     const reverse = variant === "split-reverse";
     return (
-      <Reveal className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+      <Reveal className="grid items-center gap-8 rounded-[2rem] border border-line bg-white p-4 shadow-[0_18px_45px_rgba(32,32,32,0.05)] lg:grid-cols-2 lg:gap-12 lg:p-6">
         <div className={reverse ? "lg:order-2" : ""}>
           {image}
         </div>
@@ -102,17 +102,17 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
   }
 
   return (
-    <Reveal className="flex h-full flex-col border border-primary/15 bg-white">
+    <Reveal className="flex h-full flex-col overflow-hidden rounded-[2rem] border border-line bg-white shadow-[0_18px_45px_rgba(32,32,32,0.05)]">
       <Link
         to={`/projects/${project.slug}`}
-        className="block aspect-[4/3] overflow-hidden border border-primary/15 bg-[#f0f0f0]"
+        className="group block aspect-[4/3] overflow-hidden border-b border-line bg-[#f5f3ef]"
         aria-label={`${project.title} case study`}
       >
         <img
           src={project.featuredImage.src}
           alt={project.featuredImage.alt}
           loading="lazy"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
         />
       </Link>
       <div className="flex flex-1 flex-col p-6">

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,22 +7,31 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 96px;
     -webkit-text-size-adjust: 100%;
     overflow-x: clip;
   }
 
   body {
-    @apply bg-white font-sans text-ink antialiased;
+    @apply bg-paper font-sans text-ink antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
   ::selection {
-    background: rgba(245, 166, 35, 0.35);
-    color: #17201f;
+    background: rgba(255, 200, 61, 0.4);
+    color: #202020;
   }
 
   :focus-visible {
-    outline: 2px solid #0f5550;
+    outline: 2px solid #ffc83d;
     outline-offset: 2px;
   }
 
@@ -37,39 +48,39 @@
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-page px-6 md:px-10;
+    @apply mx-auto w-full max-w-page px-5 sm:px-6 md:px-8 xl:px-10;
   }
 
   .eyebrow {
-    @apply text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-primary;
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary/70;
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all duration-200;
   }
 
   .btn-primary {
-    @apply btn rounded-full bg-accent text-primary hover:bg-[#d98f13];
+    @apply btn bg-accent text-ink shadow-[0_12px_28px_rgba(255,200,61,0.32)] hover:bg-[#eab52d];
   }
 
   .btn-dark {
-    @apply btn rounded-full bg-primary text-white hover:bg-primary-dark;
+    @apply btn bg-primary text-white hover:bg-primary-dark;
   }
 
   .btn-accent {
-    @apply btn rounded-full bg-accent text-primary hover:bg-[#d98f13];
+    @apply btn bg-accent text-ink shadow-[0_12px_28px_rgba(255,200,61,0.32)] hover:bg-[#eab52d];
   }
 
   .btn-outline {
-    @apply btn rounded-full border border-ink/25 text-ink hover:border-primary hover:text-primary;
+    @apply btn border border-line bg-white text-ink hover:border-accent hover:bg-[#fffaf0];
   }
 
   .btn-ghost {
-    @apply btn rounded-full text-ink hover:text-primary;
+    @apply btn text-ink hover:text-primary;
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-ink/15 px-3 py-1 text-xs font-medium text-ink/80;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-ink/80;
   }
 
   .page-fade {
@@ -114,6 +125,6 @@
   }
 
   .section-divider {
-    @apply border-b border-primary/15;
+    @apply border-b border-line;
   }
 }

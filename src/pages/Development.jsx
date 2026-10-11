@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { LuArrowRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
 import SectionHeading from "../components/ui/SectionHeading";
-import Reveal from "../components/ui/Reveal";
 import CtaSection from "../components/ui/CtaSection";
 import TechnologyList from "../components/ui/TechnologyList";
 import { getProject } from "../data/projects";

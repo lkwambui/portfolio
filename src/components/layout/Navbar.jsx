@@ -28,10 +28,8 @@ function DesktopNav() {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `relative text-[0.8rem] font-medium tracking-wide transition-colors ${
-                  isActive
-                    ? "text-primary"
-                    : "text-ink/70 hover:text-primary"
+                `relative text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
+                  isActive ? "text-ink" : "text-ink/60 hover:text-primary"
                 }`
               }
             >
@@ -41,7 +39,7 @@ function DesktopNav() {
                   {isActive && (
                     <span
                       aria-hidden="true"
-                      className="absolute -bottom-1.5 left-0 right-0 h-0.5 bg-accent"
+                      className="absolute -bottom-2 left-0 right-0 h-0.5 rounded-full bg-accent"
                     />
                   )}
                 </>
@@ -157,11 +155,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`no-print sticky top-0 z-40 bg-white ${
-        scrolled ? "shadow-[0_1px_0_rgba(0,0,0,0.08)]" : ""
+      className={`no-print sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md ${
+        scrolled ? "shadow-[0_10px_30px_rgba(32,32,32,0.04)]" : ""
       }`}
     >
-      <div className="container-page flex h-16 items-center justify-between gap-8">
+      <div className="container-page flex h-18 items-center justify-between gap-8 py-2">
         <Brand />
         <DesktopNav />
         <div className="flex items-center gap-3">

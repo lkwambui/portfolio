@@ -8,7 +8,7 @@ import {
   LuBoxes,
 } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
-import heroPhoto from "../assets/home/home_2.webp";
+import heroPhoto from "../assets/home/lucy-kamau.jpeg";
 import SectionHeading from "../components/ui/SectionHeading";
 import Reveal from "../components/ui/Reveal";
 import CtaSection from "../components/ui/CtaSection";
@@ -52,55 +52,56 @@ const pipeline = [
 
 function Hero() {
   return (
-    <section className="bg-primary-dark text-white">
-      <div className="container-page grid items-center gap-14 pb-24 pt-16 md:pb-28 md:pt-24 lg:grid-cols-12 lg:gap-12">
-        <div className="lg:col-span-7">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent">
-            Software Developer & Product Designer
-          </p>
-          <h1 className="mt-6 font-display text-[2.6rem] font-semibold leading-[1.06] tracking-tight sm:text-6xl md:text-[4rem]">
-            Designing thoughtful interfaces.
-            <span className="mt-2 block text-white/85">
-              Engineering powerful products.
-            </span>
-          </h1>
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/70">
-            I design and build digital products for businesses and organisations -
-            from the first sketch to a deployed system. I work at the
-            intersection of design and engineering.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Link to="/projects" className="btn-accent">
-              View Projects
-              <LuArrowUpRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-primary-dark"
-            >
-              Let&apos;s work together
-            </Link>
-          </div>
-        </div>
+    <section className="bg-paper">
+      <div className="container-page py-10 md:py-14 lg:py-16">
+        <div className="rounded-[2rem] border border-line bg-white/90 p-4 shadow-[0_22px_70px_rgba(32,32,32,0.04)] sm:p-6 lg:p-8 xl:p-10">
+          <div className="grid items-center gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:gap-10">
+            <div className="max-w-xl pl-1 md:pl-2">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-ink/60">
+                Software Developer & Product Designer
+              </p>
+              <h1 className="mt-6 font-display text-[2.65rem] font-semibold leading-[0.96] tracking-[-0.04em] text-ink sm:text-5xl md:text-[4.2rem]">
+                Designing thoughtful interfaces.
+                <span className="mt-2 block text-ink/80">
+                  Engineering powerful products.
+                </span>
+              </h1>
+              <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink/70">
+                I design and build digital products for businesses and organisations -
+                from the first sketch to a deployed system. I work at the
+                intersection of design and engineering.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link to="/projects" className="btn-accent">
+                  View Projects
+                  <LuArrowUpRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent hover:bg-[#fffaf0]"
+                >
+                  Let&apos;s work together
+                </Link>
+              </div>
+            </div>
 
-        <div className="lg:col-span-5">
-          <div className="relative mx-auto max-w-sm lg:max-w-none">
-            <div
-              className="absolute -left-4 -top-4 h-full w-full rounded-2xl border border-white/20"
-              aria-hidden="true"
-            />
-            <img
-              src={heroPhoto}
-              alt="Portrait of Lucy Kamau"
-              className="relative aspect-[4/5] w-full rounded-2xl object-cover"
-            />
-            <div className="absolute -bottom-6 -right-3 rounded-xl border border-white/15 bg-primary-dark/95 px-5 py-4 sm:-right-6">
-              <p className="font-display text-2xl font-semibold text-accent">
-                Design &#8594; Code
-              </p>
-              <p className="mt-0.5 text-xs text-white/70">
-                Product, design & engineering in one
-              </p>
+            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+              <div className="absolute -left-4 top-6 h-full w-full rounded-[2rem] bg-[#f7d75a] opacity-90" aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-[2rem] border border-line bg-[#f5f1ea] p-2 shadow-[0_22px_60px_rgba(32,32,32,0.08)]">
+                <img
+                  src={heroPhoto}
+                  alt="Portrait of Lucy Kamau"
+                  className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 right-4 rounded-2xl border border-line bg-white/90 px-4 py-3 shadow-[0_18px_38px_rgba(32,32,32,0.08)] backdrop-blur-sm sm:right-6">
+                <p className="font-display text-2xl font-semibold leading-none text-ink">
+                  Design <span className="text-accent">→</span> Code
+                </p>
+                <p className="mt-1 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-ink/55">
+                  Product, design & engineering in one
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -367,23 +368,28 @@ function Process() {
 
 export default function Home() {
   usePageMeta({
-    title: "Software Developer & Product Designer",
+    title: "Full-Stack Software Developer",
     description:
-      "Lucy Kamau is a Software Developer and Product Designer based in Kenya, designing and building digital products, websites, web applications and user experiences.",
+      "Lucy Kamau is a Full-Stack Software Developer and UI/UX Designer & Product Designer based in Kenya, building and maintaining end-to-end digital systems, websites, applications, APIs, and product experiences.",
     path: "/",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Lucy Kamau",
-      jobTitle: "Software Developer & Product Designer",
+      jobTitle: "Full-Stack Software Developer",
+      description:
+        "Full-Stack Software Developer and UI/UX Designer & Product Designer building end-to-end digital products, interfaces, applications, APIs, and business systems.",
       url: "https://lucykamau.logicorex.co.ke",
       knowsAbout: [
-        "UI/UX Design",
-        "Web Design",
-        "Frontend Development",
         "Full-Stack Development",
-        "E-commerce",
-        "Product Strategy",
+        "UI/UX Design",
+        "Product Design",
+        "Web Development",
+        "Frontend Development",
+        "Backend Development",
+        "API Development",
+        "Database Integration",
+        "Business Systems",
       ],
     },
   });

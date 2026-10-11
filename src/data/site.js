@@ -1,6 +1,8 @@
 export const site = {
   name: "Lucy Kamau",
   role: "Software Developer & Product Designer",
+  primaryRole: "Full-Stack Software Developer",
+  specialization: "UI/UX Designer & Product Designer",
   location: "Wote, Makueni, Kenya",
   email: "lucykamau949@gmail.com",
   phone: "+254799656267",
