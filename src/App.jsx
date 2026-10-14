@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/layout/ScrollToTop";
@@ -16,17 +16,22 @@ import Experience from "./pages/Experience";
 import Lab from "./pages/Lab";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+import Card from "./pages/Card";
 import NotFound from "./pages/NotFound";
 
 function App() {
+  const { pathname } = useLocation();
+  const isStandalone = pathname === "/card";
+
   return (
     <div className="flex min-h-screen flex-col bg-white font-sans text-ink">
       <ScrollToTop />
-      <Navbar />
+      {!isStandalone && <Navbar />}
       <PageTransition>
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/card" element={<Card />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />
@@ -43,7 +48,7 @@ function App() {
           </Routes>
         </main>
       </PageTransition>
-      <Footer />
+      {!isStandalone && <Footer />}
     </div>
   );
 }

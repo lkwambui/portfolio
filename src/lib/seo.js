@@ -19,11 +19,19 @@ function setMeta(attr, key, content) {
  * Sets per-page document title, meta description, Open Graph tags,
  * canonical URL and optional JSON-LD structured data.
  */
-export function usePageMeta({ title, description, path = "/", image, jsonLd, robots }) {
+export function usePageMeta({
+  title,
+  fullTitle: titleOverride,
+  description,
+  path = "/",
+  image,
+  jsonLd,
+  robots,
+}) {
   useEffect(() => {
-    const fullTitle = title
-      ? `${title} - ${site.name}`
-      : `${site.primaryRole || site.role} - ${site.name}`;
+    const fullTitle =
+      titleOverride ||
+      (title ? `${title} - ${site.name}` : `${site.primaryRole || site.role} - ${site.name}`);
     const url = `${site.domain}${path}`;
     const socialImage = image
       ? image.startsWith("http")
@@ -66,5 +74,5 @@ export function usePageMeta({ title, description, path = "/", image, jsonLd, rob
       script.textContent = JSON.stringify(jsonLd);
       document.head.appendChild(script);
     }
-  }, [title, description, path, image, jsonLd, robots]);
+  }, [title, titleOverride, description, path, image, jsonLd, robots]);
 }

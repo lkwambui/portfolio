@@ -31,6 +31,7 @@ export const nav = [
   { label: "Development", to: "/development" },
   { label: "Services", to: "/services" },
   { label: "Contact", to: "/contact" },
+  { label: "Business Card", to: "/card" },
 ];
 
 export const navSecondary = [
