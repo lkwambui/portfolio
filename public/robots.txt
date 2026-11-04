@@ -1,5 +1,6 @@
 # Public search and AI discovery crawlers are allowed.
 # Keep CSS, JavaScript and public content crawlable.
+# OpenAI crawler reference: https://platform.openai.com/docs/bots
 
 User-agent: *
 Allow: /
@@ -10,19 +11,26 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# OpenAI search discovery (ChatGPT Search).
+# OAI-SearchBot powers ChatGPT Search discovery.
+# Allow it so public pages can be surfaced in ChatGPT search results.
 User-agent: OAI-SearchBot
 Allow: /
 
-# User-initiated ChatGPT browsing.
+# ChatGPT-User is a user-triggered browsing agent, not an automatic crawler.
+# It does not determine ChatGPT Search inclusion. OAI-SearchBot controls that.
+# Allowed here so user-initiated visits can load public pages.
 User-agent: ChatGPT-User
 Allow: /
 
-# OpenAI's general crawler. Allowed here so content can be discovered.
-# To opt out of potential model training, change this rule to "Disallow: /".
-# See SEO-IMPLEMENTATION-GUIDE.md for the distinction between search and training.
+# Opt out of OpenAI foundation model training crawls.
+# This policy is independent of OAI-SearchBot and does not remove pages from search.
 User-agent: GPTBot
-Allow: /
+Disallow: /
+
+# OAI-AdsBot only validates pages submitted as ChatGPT ads.
+# Disallow because this site does not run ChatGPT ads.
+User-agent: OAI-AdsBot
+Disallow: /
 
 # Google's generative AI crawler controls. Allowed for AI Overviews and AI Mode discovery.
 User-agent: Google-Extended

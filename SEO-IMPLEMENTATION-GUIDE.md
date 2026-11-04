@@ -11,7 +11,7 @@ The site is still a React application, but the public pages are now rendered to 
 - JSON-LD structured data for the person, company, website, pages, services, projects and FAQs.
 - Visible breadcrumbs on project and service detail pages with matching `BreadcrumbList` schema.
 - A generated XML sitemap containing all indexable routes.
-- Crawler rules for search engines and AI discovery crawlers.
+- Crawler rules for search engines and AI discovery crawlers, including independent OpenAI policies for `OAI-SearchBot`, `GPTBot`, `ChatGPT-User` and `OAI-AdsBot`.
 - A concise `llms.txt` summary for AI assistants.
 - A real `404.html` instead of serving every unknown URL as the homepage.
 - Improved image semantics: descriptive alt text, dimensions where known, lazy loading and async decoding.
@@ -145,18 +145,60 @@ public/sitemap.xml
 public/llms.txt
 ```
 
-`robots.txt` allows normal search crawlers and the following AI-related crawlers:
+`robots.txt` allows normal search crawlers and applies independent OpenAI crawler policies:
 
-- `OAI-SearchBot`
-- `ChatGPT-User`
-- `GPTBot`
-- `Google-Extended`
-- `PerplexityBot`
-- `Applebot-Extended`
+- `OAI-SearchBot`: `Allow: /` so public pages can appear in ChatGPT Search results.
+- `ChatGPT-User`: `Allow: /` so user-initiated visits can load public pages. This agent is not an automatic crawler and does not determine ChatGPT Search inclusion.
+- `GPTBot`: `Disallow: /` to opt out of potential OpenAI foundation model training crawls.
+- `OAI-AdsBot`: `Disallow: /` because this site does not run ChatGPT ads.
+- `Google-Extended`, `PerplexityBot` and `Applebot-Extended`: allowed for AI discovery.
 
-`GPTBot` and `Google-Extended` are not required for search indexing. They also control whether content may be used for model training or generative AI features. Change those rules to `Disallow: /` if the business decides it does not want that use.
+The `OAI-SearchBot` and `GPTBot` policies are deliberately independent. Disallowing `GPTBot` does not remove the site from ChatGPT Search, and allowing `OAI-SearchBot` does not opt the site into model training.
 
 The sitemap is regenerated on every build. `lastmod` is the build date, not the date an individual page was edited.
+
+### OpenAI Crawler Configuration
+
+Official OpenAI crawler documentation:
+
+```text
+https://platform.openai.com/docs/bots
+```
+
+Current published OpenAI IP ranges are maintained by OpenAI. Do not copy or hardcode them into this application:
+
+```text
+https://openai.com/searchbot.json
+https://openai.com/gptbot.json
+https://openai.com/chatgpt-user.json
+https://openai.com/adsbot.json
+```
+
+Hosting and security requirements:
+
+- Keep `/robots.txt` publicly accessible without authentication.
+- Do not block `OAI-SearchBot` through a hosting firewall, CDN security setting, WAF rule, rate limit, geo-block or bot-protection challenge.
+- If the site uses Cloudflare or another security provider, inspect its bot protection, firewall, WAF and rate-limiting configuration. Allow the published OpenAI search crawler ranges from `searchbot.json` if custom IP rules are used.
+- Do not block OpenAI's published crawler IP ranges at the network, CDN or origin level.
+- Keep `OAI-SearchBot` and `GPTBot` rules independent. Do not use one bot's policy as a substitute for the other.
+
+OpenAI states that it can take approximately 24 hours from a `robots.txt` update for its systems to adjust. Do not expect immediate changes in ChatGPT Search after deployment.
+
+Test the production file after deployment:
+
+```bash
+curl -I https://lucykamau.logicorex.co.ke/robots.txt
+curl -s https://lucykamau.logicorex.co.ke/robots.txt
+```
+
+Confirm that:
+
+- The response status is `200`.
+- The response is plain text, not an HTML login, challenge or error page.
+- `OAI-SearchBot` has `Allow: /`.
+- `GPTBot` has `Disallow: /`.
+- `OAI-AdsBot` has `Disallow: /`.
+- The `Sitemap` directive points to the production sitemap.
 
 ## Hosting Configuration
 
