@@ -8,12 +8,7 @@ import ProjectFilter from "../components/projects/ProjectFilter";
 import { projects, upcomingProjects, workFilters } from "../data/projects";
 
 export default function Work() {
-  usePageMeta({
-    title: "Projects",
-    description:
-      "Selected projects and case studies by Lucy Kamau - e-commerce platforms, business systems, websites and product design.",
-    path: "/projects",
-  });
+  usePageMeta({ path: "/projects" });
 
   const [activeFilter, setActiveFilter] = useState("All");
 

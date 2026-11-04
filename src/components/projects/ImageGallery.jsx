@@ -66,6 +66,7 @@ export default function ImageGallery({ items }) {
                 src={item.src}
                 alt={item.alt}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
             </button>
@@ -111,6 +112,7 @@ export default function ImageGallery({ items }) {
             <img
               src={active.src}
               alt={active.alt}
+              decoding="async"
               className="max-h-full max-w-full object-contain"
             />
             <button

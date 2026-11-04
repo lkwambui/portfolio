@@ -1,5 +1,44 @@
+# Public search and AI discovery crawlers are allowed.
+# Keep CSS, JavaScript and public content crawlable.
+
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# OpenAI search discovery (ChatGPT Search).
+User-agent: OAI-SearchBot
+Allow: /
+
+# User-initiated ChatGPT browsing.
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI's general crawler. Allowed here so content can be discovered.
+# To opt out of potential model training, change this rule to "Disallow: /".
+# See SEO-IMPLEMENTATION-GUIDE.md for the distinction between search and training.
+User-agent: GPTBot
+Allow: /
+
+# Google's generative AI crawler controls. Allowed for AI Overviews and AI Mode discovery.
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity search discovery.
+User-agent: PerplexityBot
+Allow: /
+
+# Apple's extended crawler controls.
+User-agent: Applebot-Extended
+Allow: /
+
 Host: lucykamau.logicorex.co.ke
 
 Sitemap: https://lucykamau.logicorex.co.ke/sitemap.xml
+
+# Concise, structured site summary for AI assistants and search discovery.
+# https://lucykamau.logicorex.co.ke/llms.txt

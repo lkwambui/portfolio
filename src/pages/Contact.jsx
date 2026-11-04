@@ -27,12 +27,7 @@ const contactDetails = [
 ];
 
 export default function Contact() {
-  usePageMeta({
-    title: "Contact",
-    description:
-      "Start a project with Lucy Kamau - tell me about the website, product or business system you want designed and built.",
-    path: "/contact",
-  });
+  usePageMeta({ path: "/contact" });
 
   return (
     <>
@@ -86,11 +81,12 @@ export default function Contact() {
                     key={s.label}
                     href={s.href}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="me noopener noreferrer"
+                    aria-label={`Lucy Kamau on ${s.label} (opens in a new tab)`}
                     className="chip hover:border-primary hover:text-primary"
                   >
                     {s.label}
-                    <LuArrowUpRight className="h-3 w-3" />
+                    <LuArrowUpRight className="h-3 w-3" aria-hidden="true" />
                   </a>
                 ))}
               </div>

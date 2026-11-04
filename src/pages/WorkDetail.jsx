@@ -2,6 +2,7 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
 import Reveal from "../components/ui/Reveal";
+import Breadcrumbs from "../components/ui/Breadcrumbs";
 import CaseStudyHeader from "../components/projects/CaseStudyHeader";
 import ImageGallery from "../components/projects/ImageGallery";
 import TechnologyList from "../components/ui/TechnologyList";
@@ -39,20 +40,7 @@ export default function WorkDetail() {
   const { slug } = useParams();
   const project = getProject(slug);
 
-  usePageMeta({
-    title: project ? `${project.title} - Case Study` : "Project",
-    description: project?.description,
-    path: `/projects/${slug}`,
-    jsonLd: project
-      ? {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: project.title,
-          description: project.description,
-          creator: { "@type": "Person", name: "Lucy Kamau" },
-        }
-      : undefined,
-  });
+  usePageMeta({ path: `/projects/${slug}` });
 
   if (!project) {
     return <Navigate to="/projects" replace />;
@@ -66,6 +54,13 @@ export default function WorkDetail() {
   return (
     <>
       <article className="container-page py-14 md:py-20">
+        <Breadcrumbs
+          items={[
+            { name: "Home", path: "/" },
+            { name: "Projects", path: "/projects" },
+            { name: project.title, path: `/projects/${project.slug}` },
+          ]}
+        />
         <CaseStudyHeader project={project} />
 
         {project.featuredImage && (
@@ -73,6 +68,7 @@ export default function WorkDetail() {
             <img
               src={project.featuredImage.src}
               alt={project.featuredImage.alt}
+              decoding="async"
               className="w-full object-cover"
             />
           </Reveal>

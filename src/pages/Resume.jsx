@@ -48,12 +48,7 @@ function ResumeItem({ role, company, period, location, points }) {
 }
 
 export default function Resume() {
-  usePageMeta({
-    title: "Resume",
-    description:
-      "Lucy Kamau's resume - UI/UX designer and full-stack developer with experience across digital products, websites, business systems and e-commerce.",
-    path: "/resume",
-  });
+  usePageMeta({ path: "/resume" });
 
   return (
     <div className="container-page py-16 md:py-24">

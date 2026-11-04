@@ -13,8 +13,16 @@ export default function Footer() {
               Lucy Kamau<span className="text-accent">.</span>
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink/70">
-              Software Developer & Product Designer based in Kenya. I design and
-              build digital products that work.
+              Lead Software Developer &amp; Product Designer at{" "}
+              <a
+                href={site.companyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-ink transition-colors hover:text-primary"
+              >
+                {site.company}
+              </a>
+              , based in Kenya. I design and build digital products that work.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {socials.map((s) => (
@@ -22,11 +30,12 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="me noopener noreferrer"
+                  aria-label={`Lucy Kamau on ${s.label} (opens in a new tab)`}
                   className="inline-flex items-center gap-1.5 rounded-full border border-line bg-paper px-3 py-1 text-xs font-medium text-ink/75 transition-colors hover:border-accent hover:text-ink"
                 >
                   {s.label}
-                  <LuArrowUpRight className="h-3 w-3" />
+                  <LuArrowUpRight className="h-3 w-3" aria-hidden="true" />
                 </a>
               ))}
             </div>

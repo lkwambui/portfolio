@@ -87,6 +87,7 @@ function DevelopmentArea({ area, index }) {
                 src={project.featuredImage.src}
                 alt={project.featuredImage.alt}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -106,12 +107,7 @@ function DevelopmentArea({ area, index }) {
 }
 
 export default function Development() {
-  usePageMeta({
-    title: "Development",
-    description:
-      "Lucy Kamau's development work - frontend, full-stack, backend APIs, authentication, databases, payments, business systems and deployment.",
-    path: "/development",
-  });
+  usePageMeta({ path: "/development" });
 
   return (
     <>

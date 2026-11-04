@@ -59,12 +59,7 @@ const phaseDetails = [
 ];
 
 export default function Process() {
-  usePageMeta({
-    title: "Process",
-    description:
-      "How Lucy Kamau takes a digital product from idea to launch - discovery, definition, design, build, test and launch.",
-    path: "/process",
-  });
+  usePageMeta({ path: "/process" });
 
   return (
     <>

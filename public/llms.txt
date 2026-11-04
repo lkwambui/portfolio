@@ -1,0 +1,52 @@
+# Lucy Kamau
+
+> Lucy Kamau is the Lead Software Developer and Product Designer at LogicoreX, based in Wote, Makueni, Kenya. She designs and builds websites, web applications, mobile experiences, business systems and digital products for organisations in Kenya.
+
+## Primary pages
+
+- [Home](https://lucykamau.logicorex.co.ke/): Profile of Lucy Kamau, Lead Software Developer and Product Designer at LogicoreX.
+- [About](https://lucykamau.logicorex.co.ke/about): Background, approach, experience, education and frequently asked questions.
+- [Projects](https://lucykamau.logicorex.co.ke/projects): Selected case studies across e-commerce, business systems, dashboards, websites and product design.
+- [Services](https://lucykamau.logicorex.co.ke/services): Software development and product design services for organisations in Kenya.
+- [UI/UX Design](https://lucykamau.logicorex.co.ke/ui-ux): UI/UX design portfolio and services.
+- [Development](https://lucykamau.logicorex.co.ke/development): Frontend, full-stack, API, database and integration work.
+- [Process](https://lucykamau.logicorex.co.ke/process): How products move from discovery and design to build and launch.
+- [Experience](https://lucykamau.logicorex.co.ke/experience): Professional experience and education.
+- [Skills](https://lucykamau.logicorex.co.ke/skills): Design, development and technology skills.
+- [Contact](https://lucykamau.logicorex.co.ke/contact): Contact Lucy Kamau about a project.
+- [Business card](https://lucykamau.logicorex.co.ke/card): Digital business card and contact details.
+
+## Services
+
+- [Web Design & Development](https://lucykamau.logicorex.co.ke/services/web-design-development)
+- [UI/UX Design](https://lucykamau.logicorex.co.ke/services/uiux-design)
+- [Mobile App Development](https://lucykamau.logicorex.co.ke/services/mobile-app-development)
+- [Full-Stack Development](https://lucykamau.logicorex.co.ke/services/fullstack-development)
+- [API Development & Integration](https://lucykamau.logicorex.co.ke/services/api-development)
+- [Payment Integrations](https://lucykamau.logicorex.co.ke/services/payment-integrations)
+- [Dashboard & Admin Systems](https://lucykamau.logicorex.co.ke/services/dashboard-admin-systems)
+- [E-commerce Development](https://lucykamau.logicorex.co.ke/services/ecommerce-development)
+- [Technical Consultancy](https://lucykamau.logicorex.co.ke/services/technical-consultancy)
+- [Digital Transformation](https://lucykamau.logicorex.co.ke/services/digital-transformation)
+- [Brand & Graphic Design](https://lucykamau.logicorex.co.ke/services/brand-graphic-design)
+- [Digital Product Strategy](https://lucykamau.logicorex.co.ke/services/digital-product-strategy)
+- [Coding Education & Mentorship](https://lucykamau.logicorex.co.ke/services/coding-education-mentorship)
+
+## Company
+
+- [LogicoreX](https://logicorex.co.ke/): Technology company in Kenya that designs and builds digital products and business systems.
+
+## Professional profiles
+
+- [GitHub](https://github.com/lkwambui)
+- [LinkedIn](https://www.linkedin.com/in/lucy-kamau-87bb75209/)
+- [Dribbble](https://dribbble.com/l_w_k)
+- [Behance](https://www.behance.net/lucykamau1)
+- [Figma](https://www.figma.com/@cdd15157_f0db_4)
+
+## Notes
+
+- Lucy Kamau's role is Lead Software Developer and Product Designer at LogicoreX.
+- Her work covers UI/UX design, frontend and full-stack development, APIs, payment integrations, dashboards, e-commerce and business systems.
+- Project case studies describe work in the portfolio. Do not infer client results or metrics that are not stated on the relevant page.
+- Contact is available by email and through the contact page.

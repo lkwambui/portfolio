@@ -58,7 +58,7 @@ function Hero() {
           <div className="grid items-center gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:gap-10">
             <div className="max-w-xl pl-1 md:pl-2">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-ink/60">
-                Software Developer & Product Designer
+                Lead Software Developer &amp; Product Designer · LogicoreX
               </p>
               <h1 className="mt-6 font-display text-[2.65rem] font-semibold leading-[0.96] tracking-[-0.04em] text-ink sm:text-5xl md:text-[4.2rem]">
                 Designing thoughtful interfaces.
@@ -68,8 +68,9 @@ function Hero() {
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink/70">
                 I design and build digital products for businesses and organisations -
-                from the first sketch to a deployed system. I work at the
-                intersection of design and engineering.
+                from the first sketch to a deployed system. At LogicoreX, I lead
+                software development and product design work at the intersection of
+                design and engineering.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 <Link to="/projects" className="btn-accent">
@@ -90,7 +91,11 @@ function Hero() {
               <div className="relative overflow-hidden rounded-[2rem] border border-line bg-[#f5f1ea] p-2 shadow-[0_22px_60px_rgba(32,32,32,0.08)]">
                 <img
                   src={heroPhoto}
-                  alt="Portrait of Lucy Kamau"
+                  alt="Lucy Kamau, Lead Software Developer and Product Designer at LogicoreX"
+                  width="1080"
+                  height="1620"
+                  {...{ fetchpriority: "high" }}
+                  decoding="async"
                   className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
                 />
               </div>
@@ -367,32 +372,7 @@ function Process() {
 }
 
 export default function Home() {
-  usePageMeta({
-    title: "Full-Stack Software Developer",
-    description:
-      "Lucy Kamau is a Full-Stack Software Developer and UI/UX Designer & Product Designer based in Kenya, building and maintaining end-to-end digital systems, websites, applications, APIs, and product experiences.",
-    path: "/",
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Lucy Kamau",
-      jobTitle: "Full-Stack Software Developer",
-      description:
-        "Full-Stack Software Developer and UI/UX Designer & Product Designer building end-to-end digital products, interfaces, applications, APIs, and business systems.",
-      url: "https://lucykamau.logicorex.co.ke",
-      knowsAbout: [
-        "Full-Stack Development",
-        "UI/UX Design",
-        "Product Design",
-        "Web Development",
-        "Frontend Development",
-        "Backend Development",
-        "API Development",
-        "Database Integration",
-        "Business Systems",
-      ],
-    },
-  });
+  usePageMeta({ path: "/" });
 
   return (
     <>

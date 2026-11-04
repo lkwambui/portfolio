@@ -10,6 +10,7 @@ import ProjectDetail from "./pages/WorkDetail";
 import Design from "./pages/Design";
 import Development from "./pages/Development";
 import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
 import Process from "./pages/Process";
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
@@ -38,6 +39,7 @@ function App() {
             <Route path="/ui-ux" element={<Design />} />
             <Route path="/development" element={<Development />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/process" element={<Process />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />

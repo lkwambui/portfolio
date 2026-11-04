@@ -1,8 +1,11 @@
 export const site = {
   name: "Lucy Kamau",
-  role: "Software Developer & Product Designer",
-  primaryRole: "Full-Stack Software Developer",
-  specialization: "UI/UX Designer & Product Designer",
+  role: "Lead Software Developer & Product Designer",
+  primaryRole: "Lead Software Developer and Product Designer",
+  jobTitle: "Lead Software Developer and Product Designer",
+  specialization: "Product Designer",
+  company: "LogicoreX",
+  companyUrl: "https://logicorex.co.ke/",
   location: "Wote, Makueni, Kenya",
   email: "lucykamau949@gmail.com",
   phone: "+254799656267",
@@ -10,6 +13,24 @@ export const site = {
   whatsapp: "https://wa.me/254799656264",
   domain: "https://lucykamau.logicorex.co.ke",
   cv: "/Lucy_Kamau_CV.pdf",
+  description:
+    "Lucy Kamau is the Lead Software Developer and Product Designer at LogicoreX, designing and building websites, web applications, mobile experiences, business systems and digital products for organisations in Kenya.",
+  knowsAbout: [
+    "Software development",
+    "Web application development",
+    "Mobile application development",
+    "UI/UX design",
+    "Digital product design",
+    "Branding and graphic design",
+    "Technology consulting",
+    "Digital transformation",
+    "Technology education and coding mentorship",
+    "Full-stack development",
+    "E-commerce development",
+    "API development",
+    "Payment integrations",
+    "Business systems",
+  ],
 };
 
 export const socials = [

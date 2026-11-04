@@ -6,7 +6,12 @@ export default function ServiceCard({ service, projects = [] }) {
   return (
     <Reveal className="flex h-full flex-col border border-primary/15 bg-white p-7">
       <h3 className="font-display text-xl font-semibold tracking-tight text-ink">
-        {service.title}
+        <Link
+          to={`/services/${service.slug}`}
+          className="transition-colors hover:text-primary"
+        >
+          {service.title}
+        </Link>
       </h3>
       <p className="mt-3 text-sm leading-relaxed text-ink/70">{service.summary}</p>
 
@@ -61,12 +66,19 @@ export default function ServiceCard({ service, projects = [] }) {
         </div>
       )}
 
-      <div className="mt-auto pt-6">
+      <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-6">
         <Link
-          to="/contact"
+          to={`/services/${service.slug}`}
           className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark"
         >
-          Discuss this service
+          Explore this service
+          <LuArrowUpRight className="h-4 w-4" />
+        </Link>
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-ink/60 hover:text-primary"
+        >
+          Discuss it
           <LuArrowUpRight className="h-4 w-4" />
         </Link>
       </div>

@@ -9,6 +9,7 @@ import TechnologyList from "../components/ui/TechnologyList";
 import { site } from "../data/site";
 import { technologyGroups } from "../data/technologies";
 import { experience } from "../data/experience";
+import { faqs } from "../data/faqs";
 
 const designTools = [
   "Figma",
@@ -25,7 +26,10 @@ function PortraitBlock() {
       <div className="absolute -left-3 -top-3 h-full w-full border border-primary/15" aria-hidden="true" />
       <img
         src={aboutPhoto}
-        alt="Portrait of Lucy Kamau"
+        alt="Lucy Kamau, Lead Software Developer and Product Designer at LogicoreX"
+        width="1200"
+        height="800"
+        decoding="async"
         className="relative aspect-[3/2] w-full object-cover"
       />
     </Reveal>
@@ -33,12 +37,7 @@ function PortraitBlock() {
 }
 
 export default function About() {
-  usePageMeta({
-    title: "About",
-    description:
-      "Lucy Kamau is a UI/UX designer and full-stack developer based in Kenya, working across design, development and digital product strategy.",
-    path: "/about",
-  });
+  usePageMeta({ path: "/about" });
 
   return (
     <>
@@ -50,10 +49,10 @@ export default function About() {
               I design products, then I build the technology behind them.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70">
-              I&apos;m Lucy Kamau - a UI/UX designer, web designer and full-stack
-              developer based in {site.location}. For most of my career I&apos;ve
-              designed interfaces. What I enjoy most is going one step further and
-              building the product myself.
+              I&apos;m Lucy Kamau - the Lead Software Developer and Product Designer
+              at LogicoreX, based in {site.location}. For most of my career
+              I&apos;ve designed interfaces. What I enjoy most is going one step
+              further and building the product myself.
             </p>
           </Reveal>
         </div>
@@ -236,6 +235,32 @@ export default function About() {
                 </p>
               </Reveal>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-primary/15 bg-white" id="faq">
+        <div className="container-page py-16 md:py-24">
+          <SectionHeading
+            eyebrow="FAQ"
+            title="Common questions about working with me."
+            description="Direct answers about my work, services and how to get in touch."
+          />
+          <div className="mt-12 grid gap-4 lg:grid-cols-2">
+            {faqs.map((faq, index) => (
+              <Reveal
+                key={faq.question}
+                delay={(index % 2) * 50}
+                className="border border-primary/15 bg-white p-6"
+              >
+                <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+                  {faq.question}
+                </h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-ink/70">
+                  {faq.answer}
+                </p>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

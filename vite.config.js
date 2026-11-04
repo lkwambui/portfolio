@@ -4,4 +4,13 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    manifest: true,
+  },
+  ssr: {
+    noExternal: ['react-router-dom', 'react-router'],
+    resolve: {
+      conditions: ['module-sync', 'import', 'module', 'browser', 'default'],
+    },
+  },
 })

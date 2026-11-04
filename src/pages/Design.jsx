@@ -21,12 +21,7 @@ const designPrinciples = [
 ];
 
 export default function Design() {
-  usePageMeta({
-    title: "UI/UX Design",
-    description:
-      "Lucy Kamau's UI/UX design portfolio - landing pages, dashboards, mobile interfaces, e-commerce designs and design systems.",
-    path: "/ui-ux",
-  });
+  usePageMeta({ path: "/ui-ux" });
 
   return (
     <>

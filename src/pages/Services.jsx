@@ -24,12 +24,7 @@ const engagementSteps = [
 ];
 
 export default function Services() {
-  usePageMeta({
-    title: "Services",
-    description:
-      "Web design, UI/UX design, full-stack development, e-commerce, branding and digital product strategy services from Lucy Kamau.",
-    path: "/services",
-  });
+  usePageMeta({ path: "/services" });
 
   return (
     <>

@@ -203,12 +203,7 @@ const experiments = [
 ];
 
 export default function Lab() {
-  usePageMeta({
-    title: "Lab",
-    description:
-      "Lucy Kamau's lab - design experiments, interface explorations and development studies. Clearly labelled concepts, not client work.",
-    path: "/lab",
-  });
+  usePageMeta({ path: "/lab" });
 
   return (
     <>

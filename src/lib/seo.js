@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { site } from "../data/site";
+import { getPageSeo } from "./seoConfig";
 
 function setMeta(attr, key, content) {
   let el = document.head.querySelector(`meta[${attr}="${key}"]`);
@@ -15,64 +15,68 @@ function setMeta(attr, key, content) {
   }
 }
 
+function setCanonical(href) {
+  let canonical = document.head.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute("href", href);
+}
+
+function setJsonLd(jsonLd) {
+  document.getElementById("site-jsonld")?.remove();
+  document.getElementById("page-jsonld")?.remove();
+
+  if (!jsonLd) return;
+
+  const script = document.createElement("script");
+  script.id = "page-jsonld";
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+  document.head.appendChild(script);
+}
+
 /**
- * Sets per-page document title, meta description, Open Graph tags,
- * canonical URL and optional JSON-LD structured data.
+ * Applies per-page title, description, canonical, social metadata and JSON-LD.
+ * Page SEO defaults come from src/lib/seoConfig.js so client navigation and
+ * build-time prerendering stay consistent.
  */
-export function usePageMeta({
-  title,
-  fullTitle: titleOverride,
-  description,
-  path = "/",
-  image,
-  jsonLd,
-  robots,
-}) {
+export function usePageMeta({ path = "/", ...overrides } = {}) {
+  const { title, fullTitle, description, image, jsonLd, robots } = overrides;
+
   useEffect(() => {
-    const fullTitle =
-      titleOverride ||
-      (title ? `${title} - ${site.name}` : `${site.primaryRole || site.role} - ${site.name}`);
-    const url = `${site.domain}${path}`;
-    const socialImage = image
-      ? image.startsWith("http")
-        ? image
-        : `${site.domain}${image}`
-      : `${site.domain}/og-image.jpg`;
-    const robotsValue = robots || "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
+    const seo = getPageSeo(path, {
+      title,
+      fullTitle,
+      description,
+      image,
+      jsonLd,
+      robots,
+    });
 
-    document.title = fullTitle;
-    setMeta("name", "description", description);
-    setMeta("name", "robots", robotsValue);
-    setMeta("name", "author", site.name);
-    setMeta("property", "og:type", "website");
-    setMeta("property", "og:site_name", site.name);
+    document.title = seo.title;
+    setMeta("name", "description", seo.description);
+    setMeta("name", "robots", seo.robots);
+    setMeta("name", "author", "Lucy Kamau");
+    setMeta("property", "og:type", seo.ogType);
+    setMeta("property", "og:site_name", "Lucy Kamau");
     setMeta("property", "og:locale", "en_KE");
-    setMeta("property", "og:title", fullTitle);
-    setMeta("property", "og:description", description);
-    setMeta("property", "og:url", url);
-    setMeta("property", "og:image", socialImage);
-    setMeta("property", "og:image:alt", fullTitle);
+    setMeta("property", "og:title", seo.title);
+    setMeta("property", "og:description", seo.description);
+    setMeta("property", "og:url", seo.canonical);
+    setMeta("property", "og:image", seo.image);
+    setMeta("property", "og:image:width", "1200");
+    setMeta("property", "og:image:height", "630");
+    setMeta("property", "og:image:alt", seo.title);
     setMeta("name", "twitter:card", "summary_large_image");
-    setMeta("name", "twitter:title", fullTitle);
-    setMeta("name", "twitter:description", description);
-    setMeta("name", "twitter:image", socialImage);
+    setMeta("name", "twitter:title", seo.title);
+    setMeta("name", "twitter:description", seo.description);
+    setMeta("name", "twitter:image", seo.image);
+    setMeta("name", "twitter:image:alt", seo.title);
 
-    let canonical = document.head.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute("href", url);
-
-    let existing = document.getElementById("page-jsonld");
-    if (existing) existing.remove();
-    if (jsonLd) {
-      const script = document.createElement("script");
-      script.id = "page-jsonld";
-      script.type = "application/ld+json";
-      script.textContent = JSON.stringify(jsonLd);
-      document.head.appendChild(script);
-    }
-  }, [title, titleOverride, description, path, image, jsonLd, robots]);
+    setCanonical(seo.canonical);
+    setJsonLd(seo.jsonLd);
+  }, [path, title, fullTitle, description, image, jsonLd, robots]);
 }

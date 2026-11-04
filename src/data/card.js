@@ -1,18 +1,18 @@
-import { site } from "./site";
+import { site, socials } from "./site";
 
 export const card = {
-  name: "Lucy Kamau",
-  title: "Full-Stack Software Developer",
-  specialization: "Product Designer",
-  company: "LogicoreX Technologies",
-  companyUrl: "https://logicorex.co.ke/",
-  location: "Wote, Makueni, Kenya",
-  email: "lucykamau949@gmail.com",
+  name: site.name,
+  title: site.jobTitle,
+  specialization: site.specialization,
+  company: site.company,
+  companyUrl: site.companyUrl,
+  location: site.location,
+  email: site.email,
   phone: "+254799656264",
   phoneDisplay: "+254 799 656 264",
   whatsapp: "https://wa.me/254750649936",
-  portfolio: "https://lucykamau.logicorex.co.ke/",
-  linkedin: "https://www.linkedin.com/in/lucykamau-87bb75209/",
+  portfolio: `${site.domain}/`,
+  linkedin: socials.find((social) => social.label === "LinkedIn")?.href,
   cardUrl: `${site.domain}/card`,
   intro:
     "I design and build practical digital products for businesses — from intuitive interfaces and responsive front-ends to the APIs and business systems behind them.",

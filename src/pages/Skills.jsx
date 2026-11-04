@@ -35,12 +35,7 @@ const softSkills = [
 ];
 
 export default function Skills() {
-  usePageMeta({
-    title: "Skills",
-    description:
-      "Lucy Kamau's skills - design, development, tools and professional strengths, with real project context rather than arbitrary ratings.",
-    path: "/skills",
-  });
+  usePageMeta({ path: "/skills" });
 
   const groups = [
     {

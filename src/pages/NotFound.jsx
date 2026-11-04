@@ -3,12 +3,7 @@ import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
 
 export default function NotFound() {
-  usePageMeta({
-    title: "Page not found",
-    description: "That page doesn't exist.",
-    path: "/404",
-    robots: "noindex,follow",
-  });
+  usePageMeta({ path: "/404" });
 
   return (
     <section className="container-page flex min-h-[60vh] flex-col items-start justify-center py-20 md:py-28">

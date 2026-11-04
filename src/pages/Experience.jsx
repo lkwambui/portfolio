@@ -27,12 +27,7 @@ const milestones = [
 });
 
 export default function Experience() {
-  usePageMeta({
-    title: "Experience",
-    description:
-      "Lucy Kamau's professional experience and education - UI/UX design, web development and full-stack work across Kenyan businesses.",
-    path: "/experience",
-  });
+  usePageMeta({ path: "/experience" });
 
   return (
     <>

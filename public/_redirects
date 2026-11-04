@@ -1,4 +1,4 @@
+/index.html    /    301
 /work/:slug    /projects/:slug   301
 /work          /projects         301
 /design        /ui-ux            301
-/*    /index.html  200

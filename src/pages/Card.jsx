@@ -18,30 +18,6 @@ import CardAction from "../components/card/CardAction";
 import CardQrCode from "../components/card/CardQrCode";
 import profilePhoto from "../assets/home/lucy-kamau.jpeg";
 
-const cardJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: card.name,
-  jobTitle: card.title,
-  description: card.intro,
-  url: card.cardUrl,
-  image: `${card.portfolio}og-image.jpg`,
-  telephone: card.phone,
-  email: card.email,
-  worksFor: {
-    "@type": "Organization",
-    name: card.company,
-    url: card.companyUrl,
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Wote",
-    addressRegion: "Makueni",
-    addressCountry: "KE",
-  },
-  sameAs: [card.portfolio, card.linkedin, card.companyUrl],
-};
-
 const actions = [
   {
     label: "WhatsApp",
@@ -89,14 +65,7 @@ export default function Card() {
   const [feedback, setFeedback] = useState("");
   const [sharing, setSharing] = useState(false);
 
-  usePageMeta({
-    fullTitle: "Lucy Kamau | Full-Stack Software Developer",
-    description:
-      "Lucy Kamau is a Full-Stack Software Developer and Product Designer at LogicoreX Technologies, building practical web applications, APIs and digital products for businesses.",
-    path: "/card",
-    image: "/og-image.jpg",
-    jsonLd: cardJsonLd,
-  });
+  usePageMeta({ path: "/card" });
 
   useEffect(() => {
     if (!feedback) return undefined;

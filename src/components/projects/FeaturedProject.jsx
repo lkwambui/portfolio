@@ -43,6 +43,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
         src={project.featuredImage.src}
         alt={project.featuredImage.alt}
         loading="lazy"
+        decoding="async"
         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
       />
     </Link>
@@ -61,6 +62,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
               src={project.featuredImage.src}
               alt={project.featuredImage.alt}
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </Link>
@@ -112,6 +114,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
           src={project.featuredImage.src}
           alt={project.featuredImage.alt}
           loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
         />
       </Link>
