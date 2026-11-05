@@ -1,27 +1,32 @@
-import shopeyHome from "../assets/projects/optimized/shopey-home.webp";
-import logicorexPlatform from "../assets/projects/optimized/logicorex-platform.webp";
-import logicorexPos from "../assets/projects/optimized/logicorex-pos-etims.webp";
-import logicorexApp from "../assets/projects/optimized/logicorex-airpods-app.webp";
-import logicorexMc from "../assets/projects/optimized/logicorex-mc-website.webp";
-import kredoChapchap from "../assets/projects/optimized/kredo-chapchap.webp";
-import farmShop from "../assets/projects/optimized/farm-shop.webp";
-import hoppieStore from "../assets/projects/optimized/hoppie-store.webp";
+const shopeyHome = null;
+import logicorexHome from "../assets/projects/optimized/logicorex-home.webp";
+import logicorexProducts from "../assets/projects/optimized/logicorex-products.webp";
+const logicorexPlatform = null;
+const logicorexPos = null;
+const logicorexApp = null;
+const logicorexMc = null;
+const kredoChapchap = null;
+const farmShop = null;
+const hoppieStore = null;
 import soleKenya from "../assets/projects/optimized/sole-kenya.webp";
-import techverse from "../assets/projects/optimized/techverse.webp";
+const techverse = null;
 import partylounges from "../assets/projects/optimized/partylounges.webp";
-import partyloungesGallery from "../assets/projects/optimized/partylounges-gallery.webp";
-import partyloungesContact from "../assets/projects/optimized/partylounges-contact.webp";
-import jantanet from "../assets/projects/optimized/jantanet.webp";
-import mygiftharbor from "../assets/projects/optimized/mygiftharbor.webp";
-import mygiftharbor2 from "../assets/projects/optimized/mygiftharbor-2.webp";
-import walkingshadowpoetry from "../assets/projects/optimized/walkingshadowpoetry.webp";
-import logisco from "../assets/projects/optimized/logisco.webp";
-import sweetMoments from "../assets/projects/optimized/sweet-moments.webp";
-import sweetMomentsBanner from "../assets/projects/optimized/sweet-moments-banner.webp";
+const partyloungesGallery = null;
+const partyloungesContact = null;
+const jantanet = null;
+const mygiftharbor = null;
+const mygiftharbor2 = null;
+import walkingshadowpoetry from "../assets/projects/optimized/walking-shadow-poetry-home.webp";
+import walkingShadowPoetry from "../assets/projects/optimized/walking-shadow-poetry-poetry.webp";
+const logisco = null;
+const sweetMoments = null;
+const sweetMomentsBanner = null;
 import jeffersonMbuvi from "../assets/projects/optimized/jefferson-mbuvi.webp";
-import codesolveafrica from "../assets/projects/optimized/codesolveafrica.webp";
-import airpodsProduct from "../assets/projects/optimized/airpods-product.webp";
-import perpetuachomba from "../assets/projects/perpetuachomba.png";
+const codesolveafrica = null;
+const airpodsProduct = null;
+import perpetuachomba from "../assets/projects/optimized/perpetua-chomba.webp";
+import mcChelaaHome from "../assets/projects/optimized/mc-chelaa-home.webp";
+import mcChelaaPortfolio from "../assets/projects/optimized/mc-chelaa-portfolio.webp";
 
 export const workFilters = [
   "All",
@@ -34,7 +39,7 @@ export const workFilters = [
   "Mobile/Web Apps",
 ];
 
-export const projects = [
+const projectEntries = [
   {
     slug: "shopey",
     title: "Shopey",
@@ -122,8 +127,22 @@ export const projects = [
     order: 2,
     status: "Live",
     liveUrl: "https://logicorex.co.ke",
-    featuredImage: { src: logicorexPlatform, alt: "LogicoreX platform overview" },
+    featuredImage: { src: logicorexHome, alt: "LogicoreX software and digital product design homepage" },
     gallery: [
+      {
+        src: logicorexHome,
+        alt: "LogicoreX homepage for software development and digital products",
+        caption: "LogicoreX homepage",
+        span: "full",
+        type: "desktop",
+      },
+      {
+        src: logicorexProducts,
+        alt: "LogicoreX products and solutions page",
+        caption: "Products and solutions",
+        span: "standard",
+        type: "desktop",
+      },
       {
         src: logicorexPlatform,
         alt: "LogicoreX platform modules overview",
@@ -766,6 +785,13 @@ export const projects = [
         span: "full",
         type: "desktop",
       },
+      {
+        src: walkingShadowPoetry,
+        alt: "Walking Shadow Poetry page featuring spoken-word poetry",
+        caption: "Poetry and spoken-word page",
+        span: "wide",
+        type: "desktop",
+      },
     ],
     caseStudy: {
       overview: [
@@ -946,7 +972,54 @@ gallery: [
       ],
     },
   },
+  {
+    slug: "mc-chelaa",
+    title: "MC Chelaa",
+    category: "Web Development",
+    categories: ["Web Development", "UI/UX"],
+    description:
+      "A portfolio website presenting MC Chelaa's work as an MC, spoken-word artist and event host.",
+    role: "Website Design & Development",
+    roleAreas: ["Web Design", "Frontend Development"],
+    technologies: [],
+    featured: false,
+    order: 17,
+    status: "Portfolio website",
+    featuredImage: {
+      src: mcChelaaHome,
+      alt: "MC Chelaa portfolio homepage introducing her event hosting and spoken-word work",
+    },
+    gallery: [
+      {
+        src: mcChelaaHome,
+        alt: "MC Chelaa portfolio homepage",
+        caption: "Introduction and featured work",
+        span: "full",
+        type: "desktop",
+      },
+      {
+        src: mcChelaaPortfolio,
+        alt: "MC Chelaa portfolio showing corporate, wedding and community event hosting",
+        caption: "Selected event portfolio",
+        span: "full",
+        type: "desktop",
+      },
+    ],
+    caseStudy: {
+      overview: [
+        "A portfolio website for MC Chelaa, presenting her event hosting, spoken-word and community work.",
+        "The site brings together an introduction, service information, event portfolio, media and contact paths.",
+      ],
+    },
+  },
 ];
+
+export const projects = projectEntries
+  .filter((project) => project.featuredImage?.src)
+  .map((project) => ({
+    ...project,
+    gallery: project.gallery?.filter((image) => image.src),
+  }));
 
 export const upcomingProjects = [
   {

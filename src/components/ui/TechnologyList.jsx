@@ -5,7 +5,7 @@ export default function TechnologyList({ items, className = "" }) {
       {items.map((tech) => (
         <li
           key={tech}
-          className="rounded-sm border border-primary/15 bg-white px-2.5 py-1 text-xs font-medium text-ink/80"
+          className="border border-line bg-transparent px-2.5 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.1em] text-ink/55"
         >
           {tech}
         </li>

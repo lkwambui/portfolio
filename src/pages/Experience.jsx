@@ -1,37 +1,17 @@
 import { Link } from "react-router-dom";
-import { LuArrowRight } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
 import SectionHeading from "../components/ui/SectionHeading";
 import Reveal from "../components/ui/Reveal";
 import CtaSection from "../components/ui/CtaSection";
-import { experience } from "../data/experience";
-
-const milestones = [
-  {
-    period: "2018 - 2022",
-    title: "Diploma in Information Communication Technology",
-    place: "Rift Valley Institute of Science and Technology",
-    detail:
-      "The foundation for everything here - the start of a design and development journey.",
-  },
-  ...experience.map((job) => ({
-    period: job.period,
-    title: job.role,
-    place: `${job.company} · ${job.location}`,
-    detail: job.points.join(" "),
-  })),
-].sort((a, b) => {
-  const yearA = parseInt(a.period, 10);
-  const yearB = parseInt(b.period, 10);
-  return yearB - yearA;
-});
+import { experience, milestones } from "../data/experience";
 
 export default function Experience() {
   usePageMeta({ path: "/experience" });
 
   return (
     <>
-      <section className="bg-cream">
+      <section className="border-b border-line bg-paper">
         <div className="container-page py-16 md:py-24">
           <SectionHeading
             eyebrow="Experience"
@@ -42,44 +22,84 @@ export default function Experience() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-paper">
         <div className="container-page py-16 md:py-24">
-          <ol className="relative space-y-10 border-l border-primary/20 pl-8">
-            {milestones.map((item, index) => (
-              <Reveal key={`${item.title}-${item.period}`} delay={index * 40} className="relative">
-                <span
-                  className="absolute -left-[2.35rem] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-white"
-                  aria-hidden="true"
-                />
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  {item.period}
-                </p>
-                <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-ink">
-                  {item.title}
-                </h3>
-                <p className="mt-1 text-sm font-semibold text-primary">{item.place}</p>
-                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">
-                  {item.detail}
-                </p>
+          <ol className="border-t border-line">
+            {experience.map((job, index) => (
+              <Reveal
+                key={`${job.company}-${job.role}`}
+                delay={index * 40}
+                className="grid gap-5 border-b border-line py-8 sm:grid-cols-12 sm:gap-8"
+              >
+                <div className="sm:col-span-3">
+                  <div className="flex items-center gap-2">
+                    {job.current && (
+                      <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+                    )}
+                    <p
+                      className={`text-[0.64rem] font-semibold uppercase tracking-[0.16em] ${
+                        job.current ? "text-accent" : "text-ink/45"
+                      }`}
+                    >
+                      {job.period}
+                    </p>
+                  </div>
+                  <p className="mt-1 text-xs text-ink/45">{job.location}</p>
+                </div>
+                <div className="sm:col-span-9">
+                  <h2 className="font-display text-xl font-semibold leading-snug tracking-[-0.03em] text-ink">
+                    {job.role}
+                  </h2>
+                  <p className="mt-1 text-sm font-medium text-accent">{job.company}</p>
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+                    {job.summary}
+                  </p>
+                  <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                    {job.points.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-2 text-sm leading-relaxed text-ink/70"
+                      >
+                        <span className="mt-[0.55rem] h-1 w-1 shrink-0 bg-accent" aria-hidden="true" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </Reveal>
             ))}
           </ol>
 
-          <Reveal className="mt-14 flex flex-col items-start justify-between gap-6 border border-primary/15 bg-cream p-8 md:flex-row md:items-center">
+          <div className="mt-12 grid gap-8 border-t border-line pt-8 md:grid-cols-2">
+            {milestones.map((item) => (
+              <Reveal key={item.title}>
+                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-accent">
+                  Education · {item.period}
+                </p>
+                <h2 className="mt-2 font-display text-xl font-semibold tracking-[-0.03em] text-ink">
+                  {item.title}
+                </h2>
+                <p className="mt-1 text-sm font-medium text-ink/60">{item.place}</p>
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
+                  {item.detail}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal className="mt-12 flex flex-col items-start justify-between gap-6 border border-line bg-ivory p-8 md:flex-row md:items-center">
             <div>
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
-                Today - LogicoreX &amp; client projects
+              <h2 className="font-display text-2xl font-semibold tracking-[-0.035em] text-ink">
+                Today — LogicoreX &amp; client projects
               </h2>
-              <p className="mt-2 max-w-xl text-sm text-ink/65">
-                Beyond my UI/UX design role, I work with LogicoreX building
-                business systems for SACCOs, SMEs, retailers and farmers - from
-                POS terminals integrated with eTIMS to marketplaces and CRM
-                tools.
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
+                Leading software development and product design across websites,
+                e-commerce platforms and business systems for organisations in Kenya.
               </p>
             </div>
             <Link to="/projects/logicorex" className="btn-primary shrink-0">
               View the LogicoreX work
-              <LuArrowRight className="h-4 w-4" />
+              <LuArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </Reveal>
         </div>

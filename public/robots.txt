@@ -1,3 +1,8 @@
+
+
+
+
+
 # Public search and AI discovery crawlers are allowed.
 # Keep CSS, JavaScript and public content crawlable.
 # OpenAI crawler reference: https://platform.openai.com/docs/bots

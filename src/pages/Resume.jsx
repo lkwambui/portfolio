@@ -4,16 +4,7 @@ import { usePageMeta } from "../lib/seo";
 import { site } from "../data/site";
 import { experience } from "../data/experience";
 import { technologyGroups } from "../data/technologies";
-import { projects } from "../data/projects";
-
-const selectedProjects = [
-  "shopey",
-  "logicorex",
-  "airtime-scratch-system",
-  "party-lounges",
-  "farm-shop",
-  "mygiftharbor",
-].map((slug) => projects.find((p) => p.slug === slug));
+import { selectedWork } from "../data/selectedWork";
 
 function ResumeSection({ title, children }) {
   return (
@@ -114,7 +105,7 @@ export default function Resume() {
 
         <ResumeSection title="Selected Projects">
           <div className="grid gap-4 sm:grid-cols-2 print:grid-cols-2">
-            {selectedProjects.map((project) => (
+            {selectedWork.map((project) => (
               <div key={project.slug} className="border border-primary/15 p-4 print:break-inside-avoid">
                 <h3 className="text-sm font-semibold text-ink">{project.title}</h3>
                 <p className="mt-1 text-xs text-ink/60">{project.category}</p>

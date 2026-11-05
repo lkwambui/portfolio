@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: "Who is Lucy Kamau?",
     answer:
-      "Lucy Kamau is the Lead Software Developer and Product Designer at LogicoreX, based in Wote, Makueni, Kenya. She designs and builds websites, web applications, mobile experiences and business systems.",
+      "Lucy Kamau is the Lead Software Developer and Product Designer at LogicoreX, based in Nairobi, Kenya. She designs and builds websites, web applications, mobile experiences and business systems.",
   },
   {
     question: "What does Lucy Kamau do?",

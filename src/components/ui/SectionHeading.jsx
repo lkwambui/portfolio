@@ -13,7 +13,7 @@ export default function SectionHeading({
   return (
     <Reveal className={`flex flex-col gap-4 ${alignClass} ${className}`}>
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <Tag className="max-w-2xl font-display text-3xl font-semibold leading-[1.12] tracking-tight text-ink sm:text-4xl md:text-[2.75rem]">
+      <Tag className="max-w-2xl font-display text-[clamp(2.1rem,4.2vw,3.6rem)] font-semibold leading-[1.03] tracking-[-0.045em] text-ink">
         {title}
       </Tag>
       {description && <p className="prose-body max-w-xl">{description}</p>}

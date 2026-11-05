@@ -24,13 +24,34 @@
   }
 
   ::selection {
-    background: rgba(255, 200, 61, 0.4);
-    color: #202020;
+    background: rgba(194, 65, 12, 0.18);
+    color: #171717;
   }
 
   :focus-visible {
-    outline: 2px solid #ffc83d;
-    outline-offset: 2px;
+    outline: 2px solid #c2410c;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    [data-motion] {
+      opacity: 1 !important;
+      transform: none !important;
+      clip-path: none !important;
+    }
   }
 
   @media print {
@@ -50,45 +71,81 @@
   }
 
   .eyebrow {
-    @apply text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary/70;
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-accent;
+  }
+
+  .display-xl {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(2.85rem, 7.4vw, 6.8rem);
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+    font-weight: 700;
+  }
+
+  .display-lg {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(2.15rem, 4.6vw, 3.9rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+    font-weight: 700;
+  }
+
+  .display-md {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.65rem, 3vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+  }
+
+  .body-lg {
+    @apply text-[1.02rem] leading-[1.8] text-muted sm:text-[1.1rem];
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2.5 rounded-editorial px-6 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 ease-editorial;
   }
 
   .btn-primary {
-    @apply btn bg-accent text-ink shadow-[0_12px_28px_rgba(255,200,61,0.32)] hover:bg-[#eab52d];
+    @apply btn bg-accent text-white hover:bg-accent-hover;
   }
 
   .btn-dark {
-    @apply btn bg-primary text-white hover:bg-primary-dark;
+    @apply btn bg-ink text-paper hover:bg-primary-medium;
   }
 
   .btn-accent {
-    @apply btn bg-accent text-ink shadow-[0_12px_28px_rgba(255,200,61,0.32)] hover:bg-[#eab52d];
+    @apply btn bg-accent text-white hover:bg-accent-hover;
   }
 
   .btn-outline {
-    @apply btn border border-line bg-white text-ink hover:border-accent hover:bg-[#fffaf0];
+    @apply btn border border-ink/20 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper;
   }
 
   .btn-ghost {
-    @apply btn text-ink hover:text-primary;
+    @apply btn px-0 text-ink hover:text-accent;
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-ink/80;
+    @apply inline-flex items-center gap-1.5 border border-line bg-transparent px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-ink/70;
+  }
+
+  .link-editorial {
+    @apply inline-flex items-center gap-2 border-b border-ink/25 pb-1 text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:border-accent hover:text-accent;
+  }
+
+  .arrow-link {
+    @apply inline-flex items-center gap-2 text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:text-accent;
   }
 
   .page-fade {
-    animation: page-fade 0.4s ease both;
+    animation: page-fade 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   @keyframes page-fade {
     from {
       opacity: 0;
-      transform: translateY(8px);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
@@ -97,32 +154,36 @@
   }
 
   .reveal {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
   }
 
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-    .page-fade {
-      animation: none;
-    }
+  html:not(.motion-ready) [data-motion] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
   }
 
   .prose-body {
-    @apply text-[0.975rem] leading-[1.85] text-ink/80;
+    @apply text-[0.975rem] leading-[1.85] text-muted;
   }
 
   .section-divider {
     @apply border-b border-line;
+  }
+
+  .image-reveal {
+    overflow: hidden;
+  }
+
+  .image-reveal img {
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .image-reveal:hover img {
+    transform: scale(1.025);
+  }
+
+  .btn svg {
+    transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 }

@@ -34,8 +34,7 @@ const personNode = {
   },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Wote",
-    addressRegion: "Makueni",
+    addressLocality: "Nairobi",
     addressCountry: "KE",
   },
   alumniOf: {
@@ -194,9 +193,9 @@ const serviceCollectionNode = {
 
 const staticPages = {
   "/": {
-    title: "Lucy Kamau | Lead Software Developer & Product Designer in Kenya",
+    title: "Lucy Kamau | Software Developer & Product Designer in Kenya",
     description:
-      "Meet Lucy Kamau, Lead Software Developer and Product Designer at LogicoreX. Explore software development, UI/UX design, digital products, technology solutions and selected projects.",
+      "Lucy Kamau is a Lead Software Developer and Product Designer at LogicoreX in Kenya. Explore her software development, product design, selected projects and digital product work.",
     ogType: "website",
     nodes: [
       profilePageNode(
@@ -319,7 +318,7 @@ const staticPages = {
   "/contact": {
     title: "Contact Lucy Kamau | Software Developer & Product Designer in Kenya",
     description:
-      "Contact Lucy Kamau to discuss a website, web application, mobile experience, UI/UX design project or business system. Based in Wote, Makueni, Kenya.",
+      "Contact Lucy Kamau to discuss a website, web application, mobile experience, UI/UX design project or business system. Based in Nairobi, Kenya.",
     nodes: [contactPageNode],
   },
   "/card": {
