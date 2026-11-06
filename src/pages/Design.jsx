@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { LuArrowRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
-import SectionHeading from "../components/ui/SectionHeading";
+import PageHero from "../components/ui/PageHero";
 import Reveal from "../components/ui/Reveal";
 import CtaSection from "../components/ui/CtaSection";
 
@@ -25,18 +25,13 @@ export default function Design() {
 
   return (
     <>
-      <section className="bg-cream">
-        <div className="container-page py-16 md:py-24">
-          <SectionHeading
-            eyebrow="UI/UX Design"
-            title="Interfaces designed to be used, not just looked at."
-            description="Landing pages, dashboards, mobile interfaces, e-commerce designs and design systems - with structure, flows and the user in mind."
-            as="h1"
-          />
-        </div>
-      </section>
+      <PageHero
+        eyebrow="UI/UX Design"
+        title="Interfaces designed to be used, not just looked at."
+        description="Landing pages, dashboards, mobile interfaces, e-commerce designs and design systems - with structure, flows and the user in mind."
+      />
 
-      <section className="bg-white border-t border-primary/15">
+      <section className="bg-white border-t border-line">
         <div className="container-page py-16 md:py-24">
           <div className="mt-2 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -56,7 +51,7 @@ export default function Design() {
                 count: "6 projects",
               },
             ].map((item, index) => (
-              <Reveal key={item.title} delay={index * 60} className="border-t border-primary/15 pt-8">
+              <Reveal key={item.title} delay={index * 60} className="border-t-2 border-accent-bright pt-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                   {item.count}
                 </p>
@@ -74,7 +69,7 @@ export default function Design() {
         <div className="container-page py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent-bright">
                 How I design
               </p>
               <h2 className="mt-4 font-display text-2xl font-semibold leading-[1.12] tracking-tight sm:text-3xl">
@@ -85,7 +80,7 @@ export default function Design() {
               <div className="grid gap-0">
                 {designPrinciples.map((item, index) => (
                   <Reveal key={item.title} delay={index * 70} className="flex items-start gap-6 border-t border-white/15 py-6 last:border-b">
-                    <span className="font-display text-3xl font-semibold text-accent">
+                    <span className="font-display text-3xl font-semibold text-accent-bright">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <div>
@@ -104,7 +99,7 @@ export default function Design() {
 
       <section className="bg-white">
         <div className="container-page py-16 md:py-24">
-          <div className="flex flex-col items-start justify-between gap-6 border border-primary/15 p-8 md:flex-row md:items-center">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-line bg-paper p-8 shadow-soft md:flex-row md:items-center">
             <div>
               <h2 className="font-display text-xl font-semibold tracking-tight text-ink">
                 Want to see design work in context?

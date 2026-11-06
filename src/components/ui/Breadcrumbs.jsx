@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Breadcrumbs({ items }) {
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
-      <ol className="flex flex-wrap items-center gap-2 text-xs font-medium text-ink/55">
+      <ol className="flex flex-wrap items-center gap-2 text-xs font-medium text-ink/65">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (

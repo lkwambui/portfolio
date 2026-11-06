@@ -1,6 +1,6 @@
 export const site = {
   name: "Lucy Kamau",
-  role: "Lead Software Developer & Product Designer",
+  role: "Lead Software Developer and Product Designer",
   primaryRole: "Lead Software Developer and Product Designer",
   jobTitle: "Lead Software Developer and Product Designer",
   specialization: "Product Designer",

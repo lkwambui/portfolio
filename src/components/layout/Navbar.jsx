@@ -5,7 +5,7 @@ import { LuArrowUpRight, LuMenu, LuX } from "react-icons/lu";
 import { nav, navSecondary, site, socials } from "../../data/site";
 import { fadeUp, staggerContainer } from "../../lib/motion";
 
-function Wordmark({ onClick, light = false }) {
+function Wordmark({ onClick }) {
   return (
     <Link
       to="/"
@@ -13,17 +13,10 @@ function Wordmark({ onClick, light = false }) {
       className="group flex shrink-0 items-center gap-2.5"
       aria-label="Lucy Kamau — home"
     >
-      <span
-        className={`h-2.5 w-2.5 bg-accent transition-transform duration-300 group-hover:scale-125 ${
-          light ? "bg-accent" : ""
-        }`}
-        aria-hidden="true"
-      />
-      <span
-        className={`font-display text-[1.05rem] font-semibold tracking-[-0.035em] ${
-          light ? "text-ink" : "text-ink"
-        }`}
-      >
+      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-bright font-display text-xs font-bold tracking-tight text-primary transition-transform duration-300 group-hover:rotate-[-4deg]">
+        LK
+      </span>
+      <span className="font-display text-[1.02rem] font-semibold tracking-[-0.035em] text-white">
         Lucy Kamau
       </span>
     </Link>
@@ -43,7 +36,7 @@ function useActiveSection() {
     let frame = 0;
     const update = () => {
       frame = 0;
-      const marker = window.scrollY + 130;
+      const marker = window.scrollY + 150;
       let current = "home";
       nav.forEach((item) => {
         const element = document.getElementById(item.section);
@@ -72,7 +65,7 @@ function useActiveSection() {
 function DesktopNav({ active }) {
   return (
     <nav aria-label="Primary" className="hidden lg:block">
-      <ul className="flex items-center gap-6 xl:gap-8">
+      <ul className="flex items-center gap-1 xl:gap-2">
         {nav.map((item) => {
           const isActive = active === item.section;
           return (
@@ -80,15 +73,17 @@ function DesktopNav({ active }) {
               <Link
                 to={item.to}
                 aria-current={isActive ? "location" : undefined}
-                className={`relative py-2 text-[0.66rem] font-semibold uppercase tracking-[0.16em] transition-colors duration-200 ${
-                  isActive ? "text-ink" : "text-ink/50 hover:text-ink"
+                className={`relative rounded-full px-3 py-2 text-[0.66rem] font-semibold uppercase tracking-[0.14em] transition-colors duration-200 xl:px-3.5 ${
+                  isActive
+                    ? "bg-white/10 text-white"
+                    : "text-white/65 hover:bg-white/5 hover:text-white"
                 }`}
               >
                 {item.label}
                 <span
                   aria-hidden="true"
-                  className={`absolute -bottom-0.5 left-0 h-px bg-accent transition-all duration-300 ${
-                    isActive ? "w-full" : "w-0"
+                  className={`absolute bottom-1 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-accent-bright transition-all duration-300 ${
+                    isActive ? "w-4" : "w-0"
                   }`}
                 />
               </Link>
@@ -127,7 +122,7 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
   return (
     <m.div
       data-motion="mobile-menu"
-      className="fixed inset-0 z-50 overflow-y-auto bg-paper lg:hidden"
+      className="fixed inset-0 z-50 overflow-y-auto bg-primary text-white lg:hidden"
       role="dialog"
       aria-modal="true"
       aria-label="Site menu"
@@ -136,7 +131,7 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
       exit={{ opacity: 0, y: 8 }}
       transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="container-page flex items-center justify-between border-b border-line py-5">
+      <div className="container-page flex items-center justify-between border-b border-white/15 py-5">
         <Wordmark onClick={onClose} />
         <button
           ref={closeRef}
@@ -146,7 +141,7 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
             menuButtonRef.current?.focus();
           }}
           aria-label="Close menu"
-          className="flex h-10 w-10 items-center justify-center border border-line text-ink transition-colors hover:border-accent hover:text-accent"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-accent-bright hover:text-accent-bright"
         >
           <LuX className="h-5 w-5" />
         </button>
@@ -154,23 +149,23 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
 
       <nav aria-label="Mobile" className="container-page py-8">
         <m.ul
-          className="border-t border-line"
+          className="border-t border-white/15"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
         >
           {nav.map((item) => (
-            <m.li key={item.section} className="border-b border-line" variants={fadeUp}>
+            <m.li key={item.section} className="border-b border-white/15" variants={fadeUp}>
               <Link
                 to={item.to}
                 onClick={onClose}
                 className="group flex items-center justify-between py-4"
               >
-                <span className="font-display text-[1.65rem] font-semibold tracking-[-0.04em] text-ink transition-colors group-hover:text-accent">
+                <span className="font-display text-[1.65rem] font-semibold tracking-[-0.04em] text-white transition-colors group-hover:text-accent-bright">
                   {item.label}
                 </span>
                 <LuArrowUpRight
-                  className="h-5 w-5 text-ink/25 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+                  className="h-5 w-5 text-white/30 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-bright"
                   aria-hidden="true"
                 />
               </Link>
@@ -179,7 +174,7 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
         </m.ul>
 
         <div className="mt-8">
-          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-ink/40">
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-white/65">
             More
           </p>
           <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
@@ -188,7 +183,7 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
                 <Link
                   to={item.to}
                   onClick={onClose}
-                  className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-ink/55 transition-colors hover:text-accent"
+                  className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-white/70 transition-colors hover:text-accent-bright"
                 >
                   {item.label}
                 </Link>
@@ -197,10 +192,10 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
           </ul>
         </div>
 
-        <div className="mt-8 border-t border-line pt-6">
+        <div className="mt-8 border-t border-white/15 pt-6">
           <a
             href={`mailto:${site.email}`}
-            className="text-sm font-medium text-ink transition-colors hover:text-accent"
+            className="text-sm font-medium text-white transition-colors hover:text-accent-bright"
           >
             {site.email}
           </a>
@@ -211,7 +206,7 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
                 href={social.href}
                 target="_blank"
                 rel="me noopener noreferrer"
-                className="text-[0.66rem] font-semibold uppercase tracking-[0.13em] text-ink/50 transition-colors hover:text-accent"
+                className="text-[0.66rem] font-semibold uppercase tracking-[0.13em] text-white/65 transition-colors hover:text-accent-bright"
               >
                 {social.label}
               </a>
@@ -219,7 +214,7 @@ function MobileMenu({ open, onClose, menuButtonRef }) {
           </div>
         </div>
 
-        <Link to="/#contact" onClick={onClose} className="btn-primary mt-8 w-full">
+        <Link to="/#contact" onClick={onClose} className="btn-accent mt-8 w-full">
           Let&apos;s collaborate
           <LuArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </Link>
@@ -244,24 +239,24 @@ export default function Navbar() {
   return (
     <m.header
       data-motion="site-nav"
-      className={`no-print sticky top-0 z-40 border-b bg-paper/95 backdrop-blur-sm transition-colors duration-300 ${
-        scrolled ? "border-line" : "border-transparent"
-      }`}
-      initial={{ opacity: 0, y: -8 }}
-      animate={{ opacity: 1, y: 0 }}
+      className="no-print sticky top-0 z-40 bg-paper/95 px-3 pt-3 backdrop-blur-sm md:px-5 md:pt-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className={`container-page flex items-center justify-between gap-8 transition-all duration-300 ${
-        scrolled ? "h-[3.75rem] md:h-16" : "h-16 md:h-[4.5rem]"
-      }`}>
+      <div
+        className={`mx-auto flex max-w-page items-center justify-between gap-6 rounded-[1.6rem] bg-primary px-4 text-white transition-all duration-300 sm:px-5 md:px-6 ${
+          scrolled ? "h-14 shadow-lift md:h-16" : "h-16 shadow-card md:h-[4.5rem]"
+        }`}
+      >
         <Wordmark />
 
         <DesktopNav active={active} />
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <Link
             to="/#contact"
-            className="btn-primary hidden !px-5 !py-3 lg:inline-flex"
+            className="btn-accent hidden !min-h-0 !px-5 !py-2.5 !text-xs lg:inline-flex"
           >
             Let&apos;s collaborate
             <LuArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -272,7 +267,7 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
             aria-expanded={open}
-            className="flex h-10 w-10 items-center justify-center border border-line text-ink transition-colors hover:border-accent hover:text-accent lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-accent-bright hover:text-accent-bright lg:hidden"
           >
             <LuMenu className="h-5 w-5" />
           </button>

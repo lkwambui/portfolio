@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { usePageMeta } from "../lib/seo";
-import SectionHeading from "../components/ui/SectionHeading";
+import PageHero from "../components/ui/PageHero";
 import CtaSection from "../components/ui/CtaSection";
 import TechnologyList from "../components/ui/TechnologyList";
 import { getProject } from "../data/projects";
@@ -63,7 +63,7 @@ const tools = [
 function DevelopmentArea({ area, index }) {
   const featured = area.projects.map(getProject).filter(Boolean);
   return (
-    <div className="grid gap-8 border-t border-primary/15 py-10 last:border-b lg:grid-cols-12">
+    <div className="grid gap-8 border-t border-line py-10 last:border-b lg:grid-cols-12">
       <div className="lg:col-span-4">
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary">
           {String(index + 1).padStart(2, "0")}
@@ -80,15 +80,15 @@ function DevelopmentArea({ area, index }) {
           <Link
             key={project.slug}
             to={`/projects/${project.slug}`}
-            className="flex flex-col border border-primary/15"
+            className="group flex flex-col overflow-hidden rounded-3xl border border-line bg-white shadow-soft transition-all hover:-translate-y-1 hover:shadow-card"
           >
-            <div className="aspect-[16/10] overflow-hidden bg-[#f0f0f0]">
+            <div className="aspect-[16/10] overflow-hidden rounded-t-3xl bg-ivory">
               <img
                 src={project.featuredImage.src}
                 alt={project.featuredImage.alt}
                 loading="lazy"
                 decoding="async"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.03]"
               />
             </div>
             <div className="flex flex-1 flex-col p-5">
@@ -111,21 +111,21 @@ export default function Development() {
 
   return (
     <>
+      <PageHero
+        eyebrow="Development"
+        title="I build beyond static websites."
+        description="Frontend applications, backend services, authentication, payments, databases and business systems - development work that ships real products."
+      />
+
       <section className="bg-cream">
         <div className="container-page py-16 md:py-24">
-          <SectionHeading
-            eyebrow="Development"
-            title="I build beyond static websites."
-            description="Frontend applications, backend services, authentication, payments, databases and business systems - development work that ships real products."
-            as="h1"
-          />
-          <div className="mt-14">
+          <div>
             {developmentAreas.map((area, index) => (
               <DevelopmentArea key={area.title} area={area} index={index} />
             ))}
           </div>
 
-          <div className="mt-14 border border-primary/15 bg-white p-8">
+          <div className="mt-14 rounded-3xl border border-line bg-white p-8 shadow-soft">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary">
               Tools I work with
             </p>

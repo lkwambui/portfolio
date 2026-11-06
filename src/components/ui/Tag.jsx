@@ -1,8 +1,8 @@
 export default function Tag({ children, active = false, onClick, className = "" }) {
-  const base = "inline-flex items-center border px-3.5 py-2 text-[0.66rem] font-semibold uppercase tracking-[0.12em] transition-colors duration-200";
+  const base = "inline-flex items-center rounded-full border px-3.5 py-2 text-[0.66rem] font-semibold uppercase tracking-[0.12em] transition-colors duration-200";
   const state = active
-    ? "border-accent bg-accent text-white"
-    : "border-line bg-transparent text-ink/60 hover:border-ink/40 hover:text-ink";
+    ? "border-primary bg-primary text-white"
+    : "border-line bg-white text-ink/65 hover:border-primary/40 hover:text-primary";
   if (onClick) {
     return (
       <button type="button" onClick={onClick} className={`${base} ${state} ${className}`}>

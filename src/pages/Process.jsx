@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { LuArrowRight, LuCheck } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
+import PageHero from "../components/ui/PageHero";
 import SectionHeading from "../components/ui/SectionHeading";
 import Reveal from "../components/ui/Reveal";
 import ProcessStep from "../components/ui/ProcessStep";
@@ -63,25 +64,24 @@ export default function Process() {
 
   return (
     <>
-      <section className="container-page py-16 md:py-24">
-        <SectionHeading
-          eyebrow="Process"
-          title="From idea to launch, in six clear phases."
-          description="A working process that keeps projects moving, decisions documented and everyone aligned - without unnecessary ceremony."
-          as="h1"
-        />
+      <PageHero
+        eyebrow="Process"
+        title="From idea to launch, in six clear phases."
+        description="A working process that keeps projects moving, decisions documented and everyone aligned - without unnecessary ceremony."
+      />
 
-        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="container-page py-16 md:py-24">
+        <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {processSteps.map((step, index) => (
             <ProcessStep key={step.step} step={step} index={index} />
           ))}
         </div>
       </section>
 
-      <section className="border-t border-primary/15 bg-primary text-white">
+      <section className="border-t border-line bg-primary text-white">
         <div className="container-page py-16 md:py-24">
           <Reveal className="max-w-2xl">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent-bright">
               What to expect
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-[1.12] tracking-tight sm:text-4xl">
@@ -92,7 +92,7 @@ export default function Process() {
           <div className="mt-12 grid gap-px bg-white/10 md:grid-cols-2 lg:grid-cols-3">
             {phaseDetails.map((detail, index) => (
               <Reveal key={detail.phase} delay={(index % 3) * 60} className="bg-primary p-8">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent-bright">
                   Phase {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 font-display text-xl font-semibold tracking-tight">
@@ -101,7 +101,7 @@ export default function Process() {
                 <ul className="mt-5 space-y-2.5">
                   {detail.questions.map((question) => (
                     <li key={question} className="flex items-start gap-2.5 text-sm text-white/70">
-                      <LuCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <LuCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent-bright" />
                       {question}
                     </li>
                   ))}
@@ -143,12 +143,12 @@ export default function Process() {
               <Link
                 key={item}
                 to="/projects"
-                className="group flex items-center justify-between border border-primary/15 p-5"
+                className="group flex items-center justify-between rounded-2xl border border-line bg-white p-5 shadow-soft transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-card"
               >
                 <span className="font-display text-lg font-semibold tracking-tight text-ink">
                   {item}
                 </span>
-                <LuArrowRight className="h-5 w-5 text-ink/40" aria-hidden="true" />
+                <LuArrowRight className="h-5 w-5 text-ink/65" aria-hidden="true" />
               </Link>
             ))}
           </div>

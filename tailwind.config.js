@@ -5,21 +5,25 @@ export const content = [
 export const theme = {
   extend: {
     colors: {
-      paper: "#FAF9F6",
-      ivory: "#F3EFE8",
-      ink: "#171717",
-      muted: "#6B6862",
-      line: "#E5E0D7",
-      accent: "#C2410C",
-      "accent-bright": "#E8622A",
-      "accent-soft": "#F4E7DF",
-      "accent-hover": "#9A3309",
-      primary: "#171717",
-      "primary-dark": "#0F0F0E",
-      "primary-medium": "#2A2A27",
-      "primary-soft": "#6B6862",
+      paper: "#FAFAF6",
+      ivory: "#F3F4F1",
+      ink: "#20231F",
+      muted: "#6A716A",
+      line: "#E8E9E4",
+      accent: "#8A6500",
+      "accent-bright": "#F4B400",
+      "accent-soft": "#FFF6D9",
+      "accent-hover": "#D6A62A",
+      primary: "#254B35",
+      "primary-dark": "#193B2A",
+      "primary-medium": "#153323",
+      "primary-soft": "#6A716A",
+      forest: "#254B35",
+      "forest-deep": "#193B2A",
+      gold: "#F4B400",
+      "gold-deep": "#D6A62A",
       card: "#FFFFFF",
-      cream: "#F3EFE8",
+      cream: "#F3F4F1",
     },
     fontFamily: {
       sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
@@ -30,10 +34,29 @@ export const theme = {
       prose: "44rem",
     },
     borderRadius: {
-      editorial: "0.125rem",
+      editorial: "9999px",
+    },
+    boxShadow: {
+      soft: "0 8px 28px rgba(32, 35, 31, 0.05)",
+      card: "0 18px 48px rgba(32, 35, 31, 0.07)",
+      lift: "0 22px 55px rgba(25, 59, 42, 0.12)",
     },
     transitionTimingFunction: {
       editorial: "cubic-bezier(0.22, 1, 0.36, 1)",
+    },
+    keyframes: {
+      marquee: {
+        from: { transform: "translateX(0)" },
+        to: { transform: "translateX(-50%)" },
+      },
+      float: {
+        "0%, 100%": { transform: "translateY(0)" },
+        "50%": { transform: "translateY(-8px)" },
+      },
+    },
+    animation: {
+      marquee: "marquee 34s linear infinite",
+      float: "float 7s ease-in-out infinite",
     },
   },
 };

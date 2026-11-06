@@ -46,11 +46,11 @@ export default function Contact() {
                 const Icon = item.icon;
                 return (
                   <div key={item.label} className="flex items-start gap-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center border border-primary/15 text-primary">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-line bg-paper text-primary">
                       <Icon className="h-4 w-4" />
                     </span>
                     <div>
-                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-ink/45">
+                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-ink/65">
                         {item.label}
                       </p>
                       {item.href ? (
@@ -72,7 +72,7 @@ export default function Contact() {
             </div>
 
             <div className="mt-10">
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-ink/45">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-ink/65">
                 Elsewhere
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -97,7 +97,7 @@ export default function Contact() {
             <h2 className="font-display text-xl font-semibold tracking-tight text-ink">
               Project inquiry
             </h2>
-            <p className="mt-1 text-sm text-ink/60">
+            <p className="mt-1 text-sm text-ink/70">
               The more context you give, the more useful my reply will be.
             </p>
             <div className="mt-8">

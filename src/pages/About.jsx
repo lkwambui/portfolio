@@ -23,14 +23,14 @@ const designTools = [
 function PortraitBlock() {
   return (
     <Reveal className="relative">
-      <div className="absolute -left-3 -top-3 h-full w-full border border-primary/15" aria-hidden="true" />
+      <div className="absolute -left-3 -top-3 h-full w-full rounded-[2rem] border-2 border-accent-bright" aria-hidden="true" />
       <img
         src={aboutPhoto}
         alt="Lucy Kamau, Lead Software Developer and Product Designer at LogicoreX"
         width="1200"
         height="800"
         decoding="async"
-        className="relative aspect-[3/2] w-full object-cover"
+        className="relative aspect-[3/2] w-full rounded-[2rem] border border-line object-cover"
       />
     </Reveal>
   );
@@ -61,7 +61,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-t border-primary/15 bg-cream">
+      <section className="border-t border-line bg-cream">
         <div className="container-page py-16 md:py-24">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
@@ -114,7 +114,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-t border-primary/15 bg-cream">
+      <section className="border-t border-line bg-cream">
         <div className="container-page py-16 md:py-24">
           <SectionHeading
             eyebrow="Background"
@@ -126,21 +126,21 @@ export default function About() {
               <Reveal
                 key={`${job.company}-${job.role}`}
                 delay={index * 40}
-                className="grid gap-4 border-t border-primary/15 py-8 last:border-b sm:grid-cols-12"
+                className="grid gap-4 border-t border-line py-8 last:border-b sm:grid-cols-12"
               >
                 <div className="sm:col-span-4">
                   <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
                     {job.role}
                   </h3>
                   <p className="mt-1 text-sm font-semibold text-primary">{job.company}</p>
-                  <p className="mt-1 text-xs text-ink/55">
+                  <p className="mt-1 text-xs text-ink/65">
                     {job.period} · {job.location}
                   </p>
                 </div>
                 <ul className="space-y-2 sm:col-span-8">
                   {job.points.map((point) => (
                     <li key={point} className="flex items-start gap-3 text-sm text-ink/70">
-                      <span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-primary" />
+                      <span className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent-bright" />
                       {point}
                     </li>
                   ))}
@@ -191,12 +191,12 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-t border-primary/15 bg-primary text-white">
+      <section className="border-t border-line bg-primary text-white">
         <div className="container-page py-16 md:py-24">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-6">
               <Reveal>
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent-bright">
                   LogicoreX
                 </p>
                 <h2 className="mt-4 font-display text-3xl font-semibold leading-[1.12] tracking-tight sm:text-4xl">
@@ -212,7 +212,7 @@ export default function About() {
                 </p>
                 <Link
                   to="/projects/logicorex"
-                  className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-white"
+                  className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-accent-bright hover:text-white"
                 >
                   View the LogicoreX case study
                   <LuArrowUpRight className="h-4 w-4" />
@@ -221,7 +221,7 @@ export default function About() {
             </div>
             <div className="lg:col-span-6">
               <Reveal delay={100}>
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent-bright">
                   Mentoring &amp; education
                 </p>
                 <h2 className="mt-4 font-display text-3xl font-semibold leading-[1.12] tracking-tight sm:text-4xl">
@@ -239,7 +239,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-t border-primary/15 bg-white" id="faq">
+      <section className="border-t border-line bg-white" id="faq">
         <div className="container-page py-16 md:py-24">
           <SectionHeading
             eyebrow="FAQ"
@@ -251,7 +251,7 @@ export default function About() {
               <Reveal
                 key={faq.question}
                 delay={(index % 2) * 50}
-                className="border border-primary/15 bg-white p-6"
+                className="rounded-2xl border border-line bg-white p-6 shadow-soft"
               >
                 <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
                   {faq.question}
@@ -266,7 +266,7 @@ export default function About() {
       </section>
 
       <section className="container-page py-16 md:py-20">
-        <Reveal className="flex flex-col items-start justify-between gap-6 border border-primary/15 p-8 md:flex-row md:items-center">
+        <Reveal className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-line bg-paper p-8 shadow-soft md:flex-row md:items-center">
           <div>
             <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
               Want the full picture?

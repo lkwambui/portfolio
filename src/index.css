@@ -5,7 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 96px;
+    scroll-padding-top: 112px;
     -webkit-text-size-adjust: 100%;
     overflow-x: clip;
   }
@@ -24,12 +24,12 @@
   }
 
   ::selection {
-    background: rgba(194, 65, 12, 0.18);
-    color: #171717;
+    background: rgba(244, 180, 0, 0.32);
+    color: #20231f;
   }
 
   :focus-visible {
-    outline: 2px solid #c2410c;
+    outline: 2px solid #8a6500;
     outline-offset: 3px;
   }
 
@@ -52,6 +52,10 @@
       transform: none !important;
       clip-path: none !important;
     }
+
+    .marquee-track {
+      animation: none !important;
+    }
   }
 
   @media print {
@@ -71,7 +75,7 @@
   }
 
   .eyebrow {
-    @apply text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-accent;
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent;
   }
 
   .display-xl {
@@ -103,39 +107,39 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2.5 rounded-editorial px-6 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 ease-editorial;
+    @apply inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-semibold tracking-normal transition-all duration-300 ease-editorial;
   }
 
   .btn-primary {
-    @apply btn bg-accent text-white hover:bg-accent-hover;
+    @apply btn bg-accent-bright text-ink hover:bg-accent-hover hover:shadow-[0_12px_28px_rgba(244,180,0,0.28)];
   }
 
   .btn-dark {
-    @apply btn bg-ink text-paper hover:bg-primary-medium;
+    @apply btn bg-primary text-white hover:bg-primary-dark;
   }
 
   .btn-accent {
-    @apply btn bg-accent text-white hover:bg-accent-hover;
+    @apply btn bg-accent-bright text-ink hover:bg-accent-hover;
   }
 
   .btn-outline {
-    @apply btn border border-ink/20 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper;
+    @apply btn border border-ink/20 bg-transparent text-ink hover:border-primary hover:bg-primary hover:text-white;
   }
 
   .btn-ghost {
-    @apply btn px-0 text-ink hover:text-accent;
+    @apply btn px-0 text-ink hover:text-primary;
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 border border-line bg-transparent px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-ink/70;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-xs font-medium text-ink/70;
   }
 
   .link-editorial {
-    @apply inline-flex items-center gap-2 border-b border-ink/25 pb-1 text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:border-accent hover:text-accent;
+    @apply inline-flex items-center gap-2 border-b border-ink/25 pb-1 text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:border-primary hover:text-primary;
   }
 
   .arrow-link {
-    @apply inline-flex items-center gap-2 text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:text-accent;
+    @apply inline-flex items-center gap-2 text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:text-primary;
   }
 
   .page-fade {
@@ -173,6 +177,7 @@
 
   .image-reveal {
     overflow: hidden;
+    border-radius: 1.5rem;
   }
 
   .image-reveal img {
@@ -180,10 +185,70 @@
   }
 
   .image-reveal:hover img {
-    transform: scale(1.025);
+    transform: scale(1.035);
   }
 
   .btn svg {
     transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-line bg-white shadow-soft;
+  }
+
+  .premium-card {
+    @apply rounded-3xl border border-line bg-white p-6 shadow-soft transition-all duration-300 ease-editorial hover:-translate-y-1 hover:border-primary/25 hover:shadow-card sm:p-7;
+  }
+
+  .icon-badge {
+    @apply flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors duration-300;
+  }
+
+  .premium-card:hover .icon-badge {
+    @apply bg-primary text-accent-bright;
+  }
+
+  .gold-rule {
+    @apply h-1 w-14 rounded-full bg-accent-bright;
+  }
+
+  .marquee-band {
+    @apply relative overflow-hidden bg-accent-bright py-4 text-ink;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 34s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee-band:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-item {
+    @apply flex shrink-0 items-center gap-6 px-6 text-[0.72rem] font-bold uppercase tracking-[0.22em] sm:text-[0.78rem];
+  }
+
+  .marquee-dot {
+    @apply h-1.5 w-1.5 rounded-full bg-primary;
+  }
+
+  .portrait-shape {
+    border-radius: 46% 54% 52% 48% / 42% 40% 60% 58%;
+  }
+
+  .dark-surface {
+    @apply bg-primary text-white;
   }
 }

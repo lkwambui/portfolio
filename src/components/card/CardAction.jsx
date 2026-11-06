@@ -8,13 +8,13 @@ const baseClasses =
 
 const variantClasses = {
   primary:
-    "border-transparent bg-accent text-ink shadow-[0_12px_28px_rgba(255,200,61,0.32)] hover:bg-accent-hover",
-  outline: "border-line bg-white text-ink hover:border-accent hover:bg-[#fffaf0]",
+    "border-transparent bg-accent-bright text-primary shadow-[0_12px_28px_rgba(244,180,0,0.32)] hover:bg-accent-hover",
+  outline: "border-line bg-white text-ink hover:border-primary hover:bg-paper",
 };
 
 const iconClasses = {
-  primary: "bg-ink/10 text-ink",
-  outline: "bg-[#FFF7E3] text-primary",
+  primary: "bg-primary/10 text-primary",
+  outline: "bg-accent-soft text-primary",
 };
 
 export default function CardAction({

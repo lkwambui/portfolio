@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { LuArrowRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
+import PageHero from "../components/ui/PageHero";
 import SectionHeading from "../components/ui/SectionHeading";
 import Reveal from "../components/ui/Reveal";
 import CtaSection from "../components/ui/CtaSection";
@@ -57,16 +58,11 @@ export default function Skills() {
 
   return (
     <>
-      <section className="bg-cream">
-        <div className="container-page py-16 md:py-24">
-          <SectionHeading
-            eyebrow="Skills"
-            title="Skills you can verify through the work."
-            description="Rather than arbitrary percentages, these are the skills - each one backed by a project or product on this site."
-            as="h1"
-          />
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Skills"
+        title="Skills you can verify through the work."
+        description="Rather than arbitrary percentages, these are the skills - each one backed by a project or product on this site."
+      />
 
       <section className="bg-white">
         <div className="container-page py-16 md:py-24">
@@ -75,7 +71,7 @@ export default function Skills() {
               <Reveal
                 key={group.name}
                 delay={index * 60}
-                className="border border-primary/15 bg-white p-8"
+                className="premium-card p-8"
               >
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-primary">
                   {group.name}
@@ -103,7 +99,7 @@ export default function Skills() {
           />
           <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {technologyGroups.map((group, index) => (
-              <Reveal key={group.name} delay={index * 50} className="border border-primary/15 bg-white p-7">
+              <Reveal key={group.name} delay={index * 50} className="premium-card p-7">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-primary">
                   {group.name}
                 </p>
@@ -111,7 +107,7 @@ export default function Skills() {
                   {group.items.map((tech) => (
                     <li
                       key={tech}
-                      className="rounded-full border border-primary/15 bg-white px-3 py-1 text-xs font-medium text-ink/80"
+                      className="rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-primary"
                     >
                       {tech}
                     </li>
@@ -121,7 +117,7 @@ export default function Skills() {
             ))}
           </div>
 
-          <Reveal className="mt-12 flex flex-col items-start justify-between gap-6 border border-primary/15 bg-white p-8 md:flex-row md:items-center">
+          <Reveal className="mt-12 flex flex-col items-start justify-between gap-6 rounded-3xl border border-line bg-paper p-8 shadow-soft md:flex-row md:items-center">
             <div>
               <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
                 Want to see these skills in action?

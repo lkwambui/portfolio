@@ -5,7 +5,7 @@ import Reveal from "../ui/Reveal";
 
 export default function FeaturedProject({ project, variant = "split", index = 0 }) {
   const meta = (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink/50">
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink/65">
       <span className="text-primary">{String(index + 1).padStart(2, "0")}</span>
       <span className="h-px w-6 bg-ink/20" aria-hidden="true" />
       <span>{project.category}</span>
@@ -21,7 +21,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
       <p className="mt-3 max-w-xl text-[0.95rem] leading-relaxed text-ink/70">
         {project.description}
       </p>
-      <p className="mt-3 text-xs font-medium text-ink/50">{project.role}</p>
+      <p className="mt-3 text-xs font-medium text-ink/65">{project.role}</p>
       <TechnologyList items={project.technologies} className="mt-4" />
       <Link
         to={`/projects/${project.slug}`}
@@ -36,7 +36,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
   const image = (
     <Link
       to={`/projects/${project.slug}`}
-      className="group block aspect-[16/10] overflow-hidden rounded-[1.6rem] border border-line bg-[#f5f3ef] shadow-[0_18px_35px_rgba(32,32,32,0.05)]"
+      className="group block aspect-[16/10] overflow-hidden rounded-[1.6rem] border border-line bg-ivory shadow-[0_18px_35px_rgba(32,32,32,0.05)]"
       aria-label={`${project.title} case study`}
     >
       <img
@@ -55,7 +55,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
         <div className="lg:col-span-8">
           <Link
             to={`/projects/${project.slug}`}
-            className="group block aspect-[16/9] overflow-hidden rounded-[1.5rem] border border-line bg-[#f5f3ef]"
+            className="group block aspect-[16/9] overflow-hidden rounded-[1.5rem] border border-line bg-ivory"
             aria-label={`${project.title} case study`}
           >
             <img
@@ -107,7 +107,7 @@ export default function FeaturedProject({ project, variant = "split", index = 0 
     <Reveal className="flex h-full flex-col overflow-hidden rounded-[2rem] border border-line bg-white shadow-[0_18px_45px_rgba(32,32,32,0.05)]">
       <Link
         to={`/projects/${project.slug}`}
-        className="group block aspect-[4/3] overflow-hidden border-b border-line bg-[#f5f3ef]"
+        className="group block aspect-[4/3] overflow-hidden border-b border-line bg-ivory"
         aria-label={`${project.title} case study`}
       >
         <img

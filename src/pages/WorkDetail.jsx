@@ -27,7 +27,7 @@ function ParagraphBlock({ label, children }) {
   return (
     <div>
       {label && (
-        <h3 className="mb-2 text-sm font-semibold uppercase tracking-[0.14em] text-ink/55">
+        <h3 className="mb-2 text-sm font-semibold uppercase tracking-[0.14em] text-ink/65">
           {label}
         </h3>
       )}
@@ -69,7 +69,7 @@ export default function WorkDetail() {
               src={project.featuredImage.src}
               alt={project.featuredImage.alt}
               decoding="async"
-              className="w-full object-cover"
+              className="w-full rounded-[2rem] border border-line object-cover"
             />
           </Reveal>
         )}
@@ -98,7 +98,7 @@ export default function WorkDetail() {
                   (role) => (
                     <li
                       key={role}
-                      className="rounded-sm border border-primary/15 bg-white px-3 py-1.5 text-xs font-semibold text-ink/75"
+                      className="rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-semibold text-primary"
                     >
                       {role}
                     </li>
@@ -183,7 +183,7 @@ export default function WorkDetail() {
             </CaseSection>
           )}
 
-          <Reveal className="border-t border-primary/15 pt-8">
+          <Reveal className="border-t border-line pt-8">
             <p className="eyebrow">Technologies</p>
             <TechnologyList items={project.technologies} className="mt-4" />
           </Reveal>
@@ -191,15 +191,15 @@ export default function WorkDetail() {
       </article>
 
       <nav
-        className="container-page border-t border-primary/15 py-10"
+        className="container-page border-t border-line py-10"
         aria-label="Other projects"
       >
         <div className="grid gap-6 sm:grid-cols-2">
           <Link
             to={`/projects/${prev.slug}`}
-            className="group flex flex-col border border-primary/15 p-6 transition-colors hover:border-primary/50"
+            className="group flex flex-col rounded-3xl border border-line bg-white p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-card"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink/65">
               <LuArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />
               Previous project
             </span>
@@ -209,9 +209,9 @@ export default function WorkDetail() {
           </Link>
           <Link
             to={`/projects/${next.slug}`}
-            className="group flex flex-col border border-primary/15 p-6 text-right transition-colors hover:border-primary/50 sm:items-end"
+            className="group flex flex-col rounded-3xl border border-line bg-white p-6 text-right shadow-soft transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-card sm:items-end"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink/65">
               Next project
               <LuArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </span>

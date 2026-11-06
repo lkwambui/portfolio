@@ -2,32 +2,22 @@ import { useMemo, useState } from "react";
 import { LuArrowUpRight, LuCheck } from "react-icons/lu";
 import { site } from "../../data/site";
 
-const projectTypes = [
-  "Website",
-  "Web application",
-  "E-commerce platform",
-  "Product design / UI/UX",
-  "Business system",
-  "Technical consultancy",
-  "Other",
-];
-
 const initialForm = {
   name: "",
   email: "",
-  projectType: "",
+  subject: "",
   message: "",
 };
 
 const inputClass =
-  "w-full border border-line bg-white px-3.5 py-3 text-sm text-ink placeholder:text-ink/30 transition-colors duration-200 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/25";
+  "w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-ink/35 transition-colors duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15";
 
 function Field({ label, htmlFor, required, error, children }) {
   return (
     <div>
       <label
         htmlFor={htmlFor}
-        className="block text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-ink/55"
+        className="block text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-ink/65"
       >
         {label}
         {required && <span className="ml-1 text-accent">*</span>}
@@ -61,7 +51,7 @@ export default function ContactForm({ whatsapp = site.whatsapp }) {
         "",
         `Name: ${form.name || "—"}`,
         `Email: ${form.email || "—"}`,
-        `Project type: ${form.projectType || "Not specified"}`,
+        `Subject: ${form.subject || "—"}`,
         "",
         "Project details:",
         form.message || "—",
@@ -70,11 +60,9 @@ export default function ContactForm({ whatsapp = site.whatsapp }) {
   );
 
   const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent(
-      form.projectType ? `Project enquiry: ${form.projectType}` : "Project enquiry"
-    );
+    const subject = encodeURIComponent(form.subject || "Project enquiry");
     return `mailto:${site.email}?subject=${subject}&body=${encodeURIComponent(messageBody)}`;
-  }, [form.projectType, messageBody]);
+  }, [form.subject, messageBody]);
 
   const validate = () => {
     const next = {};
@@ -84,7 +72,7 @@ export default function ContactForm({ whatsapp = site.whatsapp }) {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       next.email = "Please check the email address.";
     }
-    if (!form.projectType) next.projectType = "Please choose a project type.";
+    if (!form.subject.trim()) next.subject = "Please add a subject.";
     if (!form.message.trim()) next.message = "Please describe the project.";
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -135,28 +123,19 @@ export default function ContactForm({ whatsapp = site.whatsapp }) {
         </Field>
       </div>
 
-      <Field
-        label="Project type"
-        htmlFor="projectType"
-        required
-        error={errors.projectType}
-      >
-        <select
-          id="projectType"
-          name="projectType"
-          value={form.projectType}
-          onChange={set("projectType")}
+      <Field label="Subject" htmlFor="subject" required error={errors.subject}>
+        <input
+          id="subject"
+          name="subject"
+          type="text"
+          value={form.subject}
+          onChange={set("subject")}
           className={inputClass}
-          aria-invalid={Boolean(errors.projectType)}
-          aria-describedby={errors.projectType ? "projectType-error" : undefined}
-        >
-          <option value="">Select a project type</option>
-          {projectTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
+          placeholder="What would you like to discuss?"
+          autoComplete="off"
+          aria-invalid={Boolean(errors.subject)}
+          aria-describedby={errors.subject ? "subject-error" : undefined}
+        />
       </Field>
 
       <Field label="Message" htmlFor="message" required error={errors.message}>
@@ -175,18 +154,18 @@ export default function ContactForm({ whatsapp = site.whatsapp }) {
 
       <div className="flex flex-wrap items-center gap-x-5 gap-y-4 border-t border-line pt-5">
         <button type="submit" className="btn-primary">
-          Send via WhatsApp
+          Send message via WhatsApp
           <LuArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </button>
         <a
           href={mailtoHref}
-          className="inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ink/60 transition-colors hover:text-accent"
+          className="inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ink/70 transition-colors hover:text-accent"
         >
           Send by email instead
         </a>
       </div>
 
-      <p className="max-w-lg text-xs leading-relaxed text-ink/45">
+      <p className="max-w-lg text-xs leading-relaxed text-ink/65">
         This site has no form backend. Submitting opens WhatsApp with your message
         ready to send. The email link opens your mail app with the same details.
       </p>

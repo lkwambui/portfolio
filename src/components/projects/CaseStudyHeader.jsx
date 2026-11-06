@@ -12,15 +12,15 @@ export default function CaseStudyHeader({ project }) {
         {project.description}
       </p>
 
-      <dl className="mt-10 grid gap-x-8 gap-y-6 border-t border-primary/15 pt-8 sm:grid-cols-2 lg:grid-cols-3">
+      <dl className="mt-10 grid gap-x-8 gap-y-6 border-t border-line pt-8 sm:grid-cols-2 lg:grid-cols-3">
         <div>
-          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink/50">
+          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink/65">
             Role
           </dt>
           <dd className="mt-2 text-sm text-ink/80">{project.role}</dd>
         </div>
         <div>
-          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink/50">
+          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink/65">
             Timeline
           </dt>
           <dd className="mt-2 text-sm text-ink/80">
@@ -29,7 +29,7 @@ export default function CaseStudyHeader({ project }) {
           </dd>
         </div>
         <div>
-          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink/50">
+          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ink/65">
             Status
           </dt>
           <dd className="mt-2 text-sm text-ink/80">{project.status}</dd>

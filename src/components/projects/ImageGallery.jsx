@@ -59,7 +59,7 @@ export default function ImageGallery({ items }) {
             <button
               type="button"
               onClick={() => open(index)}
-              className={`block w-full overflow-hidden bg-[#f0f0f0] text-left ${aspectClass[item.span] || "aspect-[4/3]"}`}
+              className={`block w-full overflow-hidden bg-ivory text-left ${aspectClass[item.span] || "aspect-[4/3]"}`}
               aria-label={`View larger: ${item.alt}`}
             >
               <img
@@ -71,9 +71,9 @@ export default function ImageGallery({ items }) {
               />
             </button>
             {item.caption && (
-              <p className="mt-2.5 text-sm text-ink/60">
+              <p className="mt-2.5 text-sm text-ink/70">
                 {item.caption}
-                <span className="ml-2 text-xs text-ink/40">{item.type}</span>
+                <span className="ml-2 text-xs text-ink/65">{item.type}</span>
               </p>
             )}
           </Reveal>
@@ -124,7 +124,7 @@ export default function ImageGallery({ items }) {
               <LuChevronRight className="h-8 w-8" />
             </button>
           </div>
-          <p className="pb-5 text-center text-xs text-white/50">
+          <p className="pb-5 text-center text-xs text-white/65">
             {activeIndex + 1} / {items.length}
           </p>
         </div>

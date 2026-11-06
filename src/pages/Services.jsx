@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { LuArrowRight, LuArrowUpRight } from "react-icons/lu";
 import { usePageMeta } from "../lib/seo";
 import SectionHeading from "../components/ui/SectionHeading";
+import PageHero from "../components/ui/PageHero";
 import Reveal from "../components/ui/Reveal";
 import ServiceCard from "../components/ui/ServiceCard";
 import CtaSection from "../components/ui/CtaSection";
@@ -28,15 +29,14 @@ export default function Services() {
 
   return (
     <>
-      <section className="container-page py-16 md:py-24">
-        <SectionHeading
-          eyebrow="Services"
-          title="Design and development services for real products."
-          description="From a single website to a complete business system - each engagement is structured, transparent and built to solve a real problem."
-          as="h1"
-        />
+      <PageHero
+        eyebrow="Services"
+        title="Design and development services for real products."
+        description="From a single website to a complete business system - each engagement is structured, transparent and built to solve a real problem."
+      />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <section className="container-page py-16 md:py-24">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <ServiceCard
               key={service.slug}
@@ -47,7 +47,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="border-t border-primary/15 bg-cream">
+      <section className="border-t border-line bg-cream">
         <div className="container-page py-16 md:py-24">
           <SectionHeading
             eyebrow="How we work"
@@ -55,7 +55,7 @@ export default function Services() {
           />
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {engagementSteps.map((step, index) => (
-              <Reveal key={step.title} delay={index * 70} className="border-t border-primary/15 pt-6">
+              <Reveal key={step.title} delay={index * 70} className="border-t-2 border-accent-bright pt-6">
                 <span className="font-display text-3xl font-semibold text-primary">
                   {String(index + 1).padStart(2, "0")}
                 </span>
@@ -67,7 +67,7 @@ export default function Services() {
             ))}
           </div>
 
-          <Reveal className="mt-14 flex flex-col items-start justify-between gap-6 border border-primary/15 bg-white p-8 md:flex-row md:items-center">
+          <Reveal className="mt-14 flex flex-col items-start justify-between gap-6 rounded-3xl border border-line bg-white p-8 shadow-soft md:flex-row md:items-center">
             <div>
               <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
                 Not sure what you need?

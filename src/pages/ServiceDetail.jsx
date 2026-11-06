@@ -66,7 +66,7 @@ export default function ServiceDetail() {
               {relatedProjects.length > 0 && (
                 <a
                   href="#related-work"
-                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent hover:bg-[#fffaf0]"
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-primary hover:bg-paper"
                 >
                   See related work
                   <LuArrowRight className="h-4 w-4" />
@@ -76,14 +76,14 @@ export default function ServiceDetail() {
           </div>
 
           <aside className="lg:col-span-5">
-            <Reveal className="border border-primary/15 bg-cream p-7">
+            <Reveal className="rounded-3xl border border-line bg-cream p-7 shadow-soft">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary">
                 Who it&apos;s for
               </p>
               <p className="mt-3 text-sm leading-relaxed text-ink/75">
                 {service.whoFor}
               </p>
-              <p className="mt-5 border-t border-primary/15 pt-5 text-sm leading-relaxed text-ink/60">
+              <p className="mt-5 border-t border-line pt-5 text-sm leading-relaxed text-ink/70">
                 Based in {site.location} and working with clients across Kenya.
               </p>
             </Reveal>
@@ -91,7 +91,7 @@ export default function ServiceDetail() {
         </div>
       </article>
 
-      <section className="border-t border-primary/15 bg-cream">
+      <section className="border-t border-line bg-cream">
         <div className="container-page py-16 md:py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -131,7 +131,7 @@ export default function ServiceDetail() {
           </div>
 
           {service.technologies?.length > 0 && (
-            <Reveal className="mt-14 border-t border-primary/15 pt-8">
+            <Reveal className="mt-14 border-t border-line pt-8">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary">
                 Relevant tools &amp; technologies
               </p>
@@ -170,7 +170,7 @@ export default function ServiceDetail() {
 
       <section className="bg-primary text-white">
         <div className="container-page py-16 md:py-24">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-accent-bright">
             How we work
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-3xl font-semibold leading-[1.12] tracking-tight sm:text-4xl">
@@ -183,7 +183,7 @@ export default function ServiceDetail() {
                 delay={index * 60}
                 className="bg-primary p-8"
               >
-                <span className="font-display text-3xl font-semibold text-accent">
+                <span className="font-display text-3xl font-semibold text-accent-bright">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-3 font-display text-xl font-semibold tracking-tight">

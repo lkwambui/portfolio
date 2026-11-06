@@ -25,7 +25,7 @@ function ResumeItem({ role, company, period, location, points }) {
           {role} <span className="text-primary">·</span>{" "}
           <span className="font-medium text-ink/80">{company}</span>
         </h3>
-        <p className="text-xs font-medium text-ink/55">
+        <p className="text-xs font-medium text-ink/65">
           {period} {location && `· ${location}`}
         </p>
       </div>
@@ -65,8 +65,8 @@ export default function Resume() {
         </div>
       </div>
 
-      <article className="border border-primary/15 bg-white p-8 sm:p-12 md:p-16 print:border-0 print:p-0">
-        <header className="border-b border-primary/15 pb-8">
+      <article className="rounded-3xl border border-line bg-white p-8 shadow-soft sm:p-12 md:p-16 print:rounded-none print:border-0 print:p-0 print:shadow-none">
+        <header className="border-b border-line pb-8">
           <h2 className="font-display text-3xl font-semibold tracking-tight text-ink">
             Lucy Kamau
           </h2>
@@ -106,9 +106,9 @@ export default function Resume() {
         <ResumeSection title="Selected Projects">
           <div className="grid gap-4 sm:grid-cols-2 print:grid-cols-2">
             {selectedWork.map((project) => (
-              <div key={project.slug} className="border border-primary/15 p-4 print:break-inside-avoid">
+              <div key={project.slug} className="rounded-2xl border border-line bg-paper p-4 print:break-inside-avoid">
                 <h3 className="text-sm font-semibold text-ink">{project.title}</h3>
-                <p className="mt-1 text-xs text-ink/60">{project.category}</p>
+                <p className="mt-1 text-xs text-ink/70">{project.category}</p>
                 <p className="mt-2 text-xs leading-relaxed text-ink/70">
                   {project.description}
                 </p>
@@ -120,7 +120,7 @@ export default function Resume() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-xs text-ink/55">
+          <p className="mt-4 text-xs text-ink/65">
             Full case studies:{" "}
             <Link to="/projects" className="text-primary underline-offset-2 hover:underline">
               lucykamau.logicorex.co.ke/projects
@@ -155,7 +155,7 @@ export default function Resume() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3">
             {technologyGroups.map((group) => (
               <div key={group.name}>
-                <h3 className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-ink/50">
+                <h3 className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-ink/65">
                   {group.name}
                 </h3>
                 <ul className="mt-2 space-y-1 text-sm text-ink/75">
@@ -173,7 +173,7 @@ export default function Resume() {
             <h3 className="font-semibold text-ink">
               Rift Valley Institute of Science and Technology
             </h3>
-            <p className="text-xs font-medium text-ink/55">September 2018 - December 2022</p>
+            <p className="text-xs font-medium text-ink/65">September 2018 - December 2022</p>
           </div>
           <p className="mt-1 text-sm text-ink/75">
             Diploma in Information Communication Technology

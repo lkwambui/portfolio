@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { usePageMeta } from "../lib/seo";
 import SectionHeading from "../components/ui/SectionHeading";
+import PageHero from "../components/ui/PageHero";
 import Reveal from "../components/ui/Reveal";
 import CtaSection from "../components/ui/CtaSection";
 import ProjectCard from "../components/projects/ProjectCard";
@@ -19,16 +20,11 @@ export default function Work() {
 
   return (
     <>
-      <section className="bg-cream">
-        <div className="container-page py-16 md:py-24">
-          <SectionHeading
-            eyebrow="Projects"
-            title="A complete archive of products I've designed and built."
-            description="Every project below is a real product - designed and developed with the problems and people in mind. Use the filters to explore by type."
-            as="h1"
-          />
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Projects"
+        title="A complete archive of products I've designed and built."
+        description="Every project below is a real product - designed and developed with the problems and people in mind. Use the filters to explore by type."
+      />
 
       <section className="bg-white">
         <div className="container-page py-16 md:py-24">
@@ -49,26 +45,26 @@ export default function Work() {
               ))}
             </div>
           ) : (
-            <p className="mt-12 text-sm text-ink/60">
+            <p className="mt-12 text-sm text-ink/70">
               No projects in this category yet.
             </p>
           )}
         </div>
       </section>
 
-      <section className="bg-cream">
+      <section className="bg-paper">
         <div className="container-page py-16 md:py-24">
           <SectionHeading
             eyebrow="In progress & systems"
             title="Products and systems being built."
             description="These projects are in active development. Case studies and screenshots will be added as they become available."
           />
-          <div className="mt-10 grid gap-px overflow-hidden border border-primary/15 bg-primary/15 md:grid-cols-2">
+          <div className="mt-10 grid gap-px overflow-hidden rounded-3xl border border-line bg-line shadow-soft md:grid-cols-2">
             {upcomingProjects.map((project, index) => (
               <Reveal
                 key={project.slug}
                 delay={(index % 2) * 60}
-                className="bg-cream p-7"
+                className="bg-white p-7"
               >
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-primary">
                   {project.category}
@@ -80,11 +76,11 @@ export default function Work() {
                   {project.description}
                 </p>
                 {project.technologies.length > 0 && (
-                  <p className="mt-3 text-xs font-medium text-ink/50">
+                  <p className="mt-3 text-xs font-medium text-ink/65">
                     {project.technologies.join(" · ")}
                   </p>
                 )}
-                <p className="mt-3 text-xs text-ink/40">{project.note}</p>
+                <p className="mt-3 text-xs text-ink/65">{project.note}</p>
               </Reveal>
             ))}
           </div>

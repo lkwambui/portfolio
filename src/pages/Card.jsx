@@ -109,13 +109,13 @@ export default function Card() {
       <div className="mx-auto w-full max-w-xl px-4 py-8 sm:px-6 sm:py-12">
         <div className="space-y-5">
           <header className="overflow-hidden rounded-3xl border border-line bg-white shadow-[0_20px_55px_rgba(32,32,32,0.07)]">
-            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-b border-line bg-paper px-5 py-3">
-              <span className="inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary/70">
-                <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-b border-primary bg-primary px-5 py-3 text-white">
+              <span className="inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white/85">
+                <span className="h-2 w-2 rounded-full bg-accent-bright" aria-hidden="true" />
                 {card.company}
               </span>
-              <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-muted">
-                <LuMapPin className="h-3.5 w-3.5 text-primary/60" aria-hidden="true" />
+              <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-white/65">
+                <LuMapPin className="h-3.5 w-3.5 text-accent-bright" aria-hidden="true" />
                 {card.location}
               </span>
             </div>
@@ -216,7 +216,7 @@ export default function Card() {
                   type="button"
                   onClick={handleShare}
                   disabled={sharing}
-                  className="mt-5 inline-flex items-center gap-2 rounded-full border border-line bg-white px-5 py-2.5 text-sm font-semibold text-ink motion-safe:transition-colors motion-safe:duration-200 hover:border-accent hover:bg-[#fffaf0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:opacity-60"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full border border-line bg-white px-5 py-2.5 text-sm font-semibold text-ink motion-safe:transition-colors motion-safe:duration-200 hover:border-accent hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:opacity-60"
                 >
                   <LuShare2 className="h-4 w-4" aria-hidden="true" />
                   {sharing ? "Sharing…" : "Share Card"}
@@ -230,7 +230,7 @@ export default function Card() {
           </section>
 
           <footer className="flex flex-col items-center gap-2 pt-2 pb-4 text-center">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-primary/45">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-primary/70">
               {card.company}
             </p>
             <a

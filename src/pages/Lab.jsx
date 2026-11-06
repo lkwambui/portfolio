@@ -134,21 +134,21 @@ function DashboardConcept() {
         </span>
       </div>
       <div className="mt-5 grid flex-1 grid-cols-2 gap-3">
-        <div className="border border-primary/15 p-4">
+        <div className="border border-line p-4">
           <p className="text-[0.65rem] font-medium uppercase tracking-[0.16em] text-ink/45">
             Metric
           </p>
           <p className="mt-3 font-display text-3xl font-semibold text-ink">-</p>
           <div className="mt-3 h-1.5 w-full bg-ink/10" />
         </div>
-        <div className="border border-primary/15 p-4">
+        <div className="border border-line p-4">
           <p className="text-[0.65rem] font-medium uppercase tracking-[0.16em] text-ink/45">
             Metric
           </p>
           <p className="mt-3 font-display text-3xl font-semibold text-ink">-</p>
           <div className="mt-3 h-1.5 w-full bg-primary/20" />
         </div>
-        <div className="col-span-2 border border-primary/15 p-4">
+        <div className="col-span-2 border border-line p-4">
           <p className="text-[0.65rem] font-medium uppercase tracking-[0.16em] text-ink/45">
             Trend
           </p>
@@ -222,9 +222,9 @@ export default function Lab() {
               <Reveal
                 key={experiment.title}
                 delay={(index % 2) * 60}
-                className="flex flex-col border border-primary/15"
+                className="flex flex-col overflow-hidden rounded-3xl border border-line bg-white shadow-soft"
               >
-                <div className="border-b border-primary/15 bg-white p-7">
+                <div className="border-b border-line bg-white p-7">
                   <div className="flex items-center justify-between gap-4">
                     <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-primary">
                       {experiment.kind}
@@ -246,7 +246,7 @@ export default function Lab() {
           })}
         </div>
 
-        <Reveal className="mt-14 border border-dashed border-primary/25 bg-cream p-8">
+        <Reveal className="mt-14 rounded-3xl border border-dashed border-primary/30 bg-cream p-8">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-ink/40">
             A note on the Lab
           </p>

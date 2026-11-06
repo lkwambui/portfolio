@@ -5,7 +5,7 @@ export default function Intro() {
   const { intro } = homeContent;
 
   return (
-    <section id="introduction" className="border-b border-line bg-paper">
+    <section id="introduction" className="border-b border-line bg-white">
       <div className="container-page py-16 md:py-24 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-4">
@@ -24,11 +24,10 @@ export default function Intro() {
               ))}
             </div>
 
-            <Reveal delay={160} className="mt-12 border-t border-line pt-8 md:mt-16 md:pt-10">
-              <p className="max-w-3xl font-display text-[clamp(1.6rem,3.2vw,2.8rem)] font-semibold leading-[1.16] tracking-[-0.04em] text-ink">
-                <span className="mr-2 text-accent">“</span>
+            <Reveal delay={160} className="mt-10 overflow-hidden rounded-3xl bg-primary p-6 text-white shadow-card sm:mt-14 sm:p-8">
+              <div className="gold-rule mb-5" aria-hidden="true" />
+              <p className="max-w-3xl font-display text-[clamp(1.5rem,3.2vw,2.5rem)] font-semibold leading-[1.16] tracking-[-0.04em] text-white">
                 {intro.statement}
-                <span className="ml-1 text-accent">”</span>
               </p>
             </Reveal>
           </div>

@@ -1,10 +1,10 @@
 export const homeContent = {
   hero: {
-    eyebrow: "Lead Software Developer & Product Designer",
+    eyebrow: "Lead Software Developer and Product Designer",
     headline: ["Building digital experiences.", "Designing what comes next."],
     intro:
       "I'm Lucy Kamau, a Lead Software Developer and Product Designer passionate about building meaningful digital products, solving complex problems and creating intuitive user experiences.",
-    designation: "Lead Software Developer & Product Designer at LogicoreX",
+    designation: "Lead Software Developer and Product Designer at LogicoreX",
     location: "Nairobi, Kenya",
     primaryCta: { label: "Explore my work", to: "/#work" },
     secondaryCta: { label: "Let's collaborate", to: "/#contact" },
@@ -38,7 +38,7 @@ export const homeContent = {
   },
   contact: {
     eyebrow: "Contact",
-    heading: "Have an idea worth building?",
-    body: "Whether you're planning a digital product, looking for a development partner or exploring a collaboration, I'd love to hear about it.",
+    heading: "Have a project in mind?",
+    body: "Let's discuss how we can turn your ideas into meaningful digital experiences.",
   },
 };

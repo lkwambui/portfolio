@@ -193,20 +193,20 @@ const serviceCollectionNode = {
 
 const staticPages = {
   "/": {
-    title: "Lucy Kamau | Software Developer & Product Designer in Kenya",
+    title: "Lucy Kamau | Lead Software Developer and Product Designer in Kenya",
     description:
       "Lucy Kamau is a Lead Software Developer and Product Designer at LogicoreX in Kenya. Explore her software development, product design, selected projects and digital product work.",
     ogType: "website",
     nodes: [
       profilePageNode(
         "/",
-        "Lucy Kamau — Lead Software Developer & Product Designer",
+        "Lucy Kamau — Lead Software Developer and Product Designer",
         site.description
       ),
     ],
   },
   "/about": {
-    title: "About Lucy Kamau | Lead Software Developer & Product Designer",
+    title: "About Lucy Kamau | Lead Software Developer and Product Designer",
     description:
       "Learn about Lucy Kamau, Lead Software Developer and Product Designer at LogicoreX, and her approach to software development, UI/UX design and digital products in Kenya.",
     ogType: "profile",
@@ -304,7 +304,7 @@ const staticPages = {
     ],
   },
   "/resume": {
-    title: "Resume | Lucy Kamau — Lead Software Developer & Product Designer",
+    title: "Resume | Lucy Kamau — Lead Software Developer and Product Designer",
     description:
       "View and download Lucy Kamau's resume: Lead Software Developer and Product Designer at LogicoreX with experience in UI/UX, web development and business systems.",
     nodes: [
@@ -322,7 +322,7 @@ const staticPages = {
     nodes: [contactPageNode],
   },
   "/card": {
-    title: "Lucy Kamau | Lead Software Developer & Product Designer",
+    title: "Lucy Kamau | Lead Software Developer and Product Designer",
     description:
       "Digital business card for Lucy Kamau, Lead Software Developer and Product Designer at LogicoreX. Contact details, portfolio, LinkedIn and professional focus.",
     ogType: "profile",
