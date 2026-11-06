@@ -1,7 +1,7 @@
 # Lucy Kamau Portfolio
 
 A personal portfolio for Lucy Kamau, Lead Software Developer and Product
-Designer at LogicoreX in Nairobi, Kenya. The site presents her UI/UX and
+Designer at LogicoreX in Wote Town, Makueni, Kenya. The site presents her UI/UX and
 product design work alongside the engineering behind it, with case studies,
 services, experience and a digital business card.
 

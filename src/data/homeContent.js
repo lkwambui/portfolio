@@ -5,7 +5,7 @@ export const homeContent = {
     intro:
       "I'm Lucy Kamau, a Lead Software Developer and Product Designer passionate about building meaningful digital products, solving complex problems and creating intuitive user experiences.",
     designation: "Lead Software Developer and Product Designer at LogicoreX",
-    location: "Nairobi, Kenya",
+    location: "Wote Town, Makueni, Kenya",
     primaryCta: { label: "Explore my work", to: "/#work" },
     secondaryCta: { label: "Let's collaborate", to: "/#contact" },
   },

@@ -32,9 +32,6 @@ export default function Footer() {
               className="inline-flex items-center gap-2.5"
               aria-label="Lucy Kamau — home"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-bright font-display text-xs font-bold tracking-tight text-primary">
-                LK
-              </span>
               <span className="font-display text-lg font-semibold tracking-[-0.04em] text-white">
                 Lucy Kamau
               </span>

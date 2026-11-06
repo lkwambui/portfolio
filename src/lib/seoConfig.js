@@ -34,7 +34,8 @@ const personNode = {
   },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Nairobi",
+    addressLocality: "Wote",
+    addressRegion: "Makueni County",
     addressCountry: "KE",
   },
   alumniOf: {
@@ -318,7 +319,7 @@ const staticPages = {
   "/contact": {
     title: "Contact Lucy Kamau | Software Developer & Product Designer in Kenya",
     description:
-      "Contact Lucy Kamau to discuss a website, web application, mobile experience, UI/UX design project or business system. Based in Nairobi, Kenya.",
+      "Contact Lucy Kamau to discuss a website, web application, mobile experience, UI/UX design project or business system. Based in Wote Town, Makueni County, Kenya.",
     nodes: [contactPageNode],
   },
   "/card": {

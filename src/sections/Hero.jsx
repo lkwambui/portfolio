@@ -146,9 +146,6 @@ export default function Hero() {
                     Software, design &amp; product strategy
                   </p>
                 </div>
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-bright text-xs font-bold text-primary">
-                  LK
-                </span>
               </figcaption>
             </figure>
 

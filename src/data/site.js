@@ -7,7 +7,7 @@ export const site = {
   company: "LogicoreX",
   companyUrl: "https://logicorex.co.ke/",
   companyTagline: "Building digital solutions that empower businesses.",
-  location: "Nairobi, Kenya",
+  location: "Wote Town, Makueni, Kenya",
   email: "lucykamau949@gmail.com",
   phone: "+254799656267",
   phoneDisplay: "+254 799 656 267",
@@ -15,7 +15,7 @@ export const site = {
   domain: "https://lucykamau.logicorex.co.ke",
   cv: "/Lucy_Kamau_CV.pdf",
   description:
-    "Lucy Kamau is the Lead Software Developer and Product Designer at LogicoreX, building websites, web applications, e-commerce platforms, business systems and thoughtful digital products from Nairobi, Kenya.",
+    "Lucy Kamau is the Lead Software Developer and Product Designer at LogicoreX, building websites, web applications, e-commerce platforms, business systems and thoughtful digital products from Wote Town, Makueni, Kenya.",
   knowsAbout: [
     "Software development",
     "Web application development",

@@ -13,9 +13,6 @@ function Wordmark({ onClick }) {
       className="group flex shrink-0 items-center gap-2.5"
       aria-label="Lucy Kamau — home"
     >
-      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-bright font-display text-xs font-bold tracking-tight text-primary transition-transform duration-300 group-hover:rotate-[-4deg]">
-        LK
-      </span>
       <span className="font-display text-[1.02rem] font-semibold tracking-[-0.035em] text-white">
         Lucy Kamau
       </span>
